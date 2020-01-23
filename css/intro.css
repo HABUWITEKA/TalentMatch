@@ -1,0 +1,76 @@
+body{
+	background-color: #1CC8E3;
+}
+.box{
+	width: 275px;
+	height: 70px;
+	background-color: white;
+	border-radius: 10px;
+	padding: 0px;
+}
+.box1{
+	top:270px;
+	left:200px;
+	position: relative;
+}
+.box2{
+	top:270px;
+	left:600px;
+	position: absolute;
+}
+#box-container{
+	left:140px;
+	position: absolute;
+}
+.introimg{
+	width: 70px;
+	height: 70px;
+}
+.text{
+	font-family: Microsoft YaHei UI;
+	font-size: 25px;
+	color: black;
+	top:-5px;
+	left:80px;
+	position: absolute;
+}
+#alt{
+	top:400px;
+	left:500px;
+	position: absolute;
+	font-family: Microsoft YaHei UI;
+	font-size: 20px;
+	color: black;
+	letter-spacing: 3px;
+}
+#alt a{
+	text-decoration-line: none;
+	color: #C8E31C;
+}
+.copyrights{
+	width: 1366px;
+	height: 40px;
+	background-color: black;
+	left:0px;
+	top:625px;
+	color: #C8E31C;
+	position: absolute;
+	font-family: Microsoft YaHei UI;
+	font-size: 15px;
+}
+#copy
+{
+	top:-5px;
+	left:580px;
+	position: absolute;
+}
+#copy a{
+	text-decoration: none;
+	color: #C8E31C;
+}
+.text:hover{
+	color:#C8E31C;
+}
+.box:hover{
+	background-color: #1CC8E3;
+}
