@@ -55,9 +55,98 @@
         <div class="line" style="top: -3px; left:510px;position: relative;"></div>
         <a href="" style="top:-280px;position:absolute; left: -40px;"><button class="btn btn1">JOIN NOW</button></a>
     </div>
+    <!-- Opportunities posting and filtering -->
+    <div id="myBtnContainer">
+        <button class="filterr active" onclick="filterSelection('All')">All</button>
+        <button class=" filterr"  onclick="filterSelection('Part-time')">Part-time</button>
+        <button class=" filterr"   onclick="filterSelection('Full-time')">Full-time</button>
+        <button class=" filterr"   onclick="filterSelection('Internships')">Internships</button>
+      </div>
 
-    <div class="copyrights">
+      <section class="opcorner">
+        <div class="posts Full-time">
+            <p class="posttitle">Front End developer at<br>  TalentMatch</p>
+            <img class="postimg" src="img/undraw_responsive_6c8s.svg">
+            <p class="type">Full-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="posts Part-time">
+            <p class="posttitle">Remote accountant at <br> Urumuri Ltd.</p>
+            <img class="postimg" src="img/undraw_wallet_aym5.svg">
+            <p class="type">Part-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="posts Full-time">
+            <p class="posttitle">Jobs at Mass Design</p>
+            <img class="postimg" src="img/undraw_QA_engineers_dg5p.svg">
+            <p class="type">Full-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="posts Full-time">
+            <p class="posttitle">Students Affair Manager<br>at ALU Rwanda</p>
+            <img class="postimg" src="img/undraw_candidate_ubwv.svg">
+            <p class="type">Full-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="posts Internships">
+            <p class="posttitle">Remote accountant at <br> H&B Holdings</p>
+            <img class="postimg" src="img/undraw_working_late_pukg.svg">
+            <p class="type">Internship</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="posts Internships">
+            <p class="posttitle">Internship positions at<br> Kigalitoday</p>
+            <img class="postimg" src="img/undraw_online_media_62jb.svg">
+            <p class="type">Internship</p>
+            <p class="due">Deadline:6 Nov 2020</p>
+        </div>
+        <div id="copyrights" class="posts" style="display: block;">
         <p id="copy">Copyrights <a target="_blank" href="http://talentmatch.rw/">TalentMatch.inc</a></p>
     </div>
+      </section>
+      <script>
+        filterSelection("All")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("posts");
+          if (c == "All") c = "";
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("filterr");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+        </script>
 </body>
 </html>
