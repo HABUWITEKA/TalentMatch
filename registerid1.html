@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pleased to welcome you</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main2.css'>
+    <script>
+    var input = document.getElementById( 'file-upload' );
+var infoArea = document.getElementById( 'file-upload-filename' );
+
+// input.addEventListener( 'change', showFileName );
+
+function showFileName( event ) {
+  
+  // the change event gives us the input it occurred in 
+  var input = event.srcElement;
+  
+  // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
+  var fileName = input.files[0].name;
+  
+  // use fileName however fits your app best, i.e. add it into a div
+  infoArea.textContent = 'File name: ' + fileName;
+}
+</script>
+</head>
+<body>
+   <!-- talentmatch logo -->
+   <img src="img/talent.png" class="logoo">
+   <!-- Register form addon -->
+   <div id="firstt">
+   <p class="title">Register Form</p>
+    <div class="line"></div>
+</div>
+
+<div class="reg1">
+    <div class="circle1 circle11">1</div>
+    <p id="stepp1">Personal Details</p>
+</div>
+
+
+<form action="" class="forrm">
+    <!-- Persona details -->
+    <label for="">First name</label><br>
+    <input type="text"><br>
+    <div id="lastname">
+    <label for="">Last Name</label><br>
+    <input type="text"><br>
+</div><br><br>
+<label for="">E-mail</label><br>
+<input type="email"><br>
+<div id="telephone">
+<label for="">Telephone</label><br>
+<input type="tel"><br>
+</div><br><br>
+<label for="">Password</label><br>
+<input type="password"><br>
+<div id="cpassword">
+<label>Confirm Password</label><br>
+<input type="password"></div><br><br>
+<!-- Academic details -->
+<div class="reg1">
+    <div class="circle1 circle11">2</div>
+    <p id="stepp1">Academic Details</p>
+</div><br><br>
+<section id="academia">
+<label>Current University</label><br>
+<input type="text">
+<div id="degree">
+<label>Degree</label><br>
+<input type="text">
+
+</div><br><br>
+<label>Graduation Year</label><br>
+<input type="month"><br><br>
+</section>
+<div class="reg1">
+    <div class="circle1 circle11">3</div>
+    <p id="stepp1">Resume Upload</p>
+</div><br>
+<input type="file" id="file-upload">
+  <label for="file-upload">
+      <div class="file-upload"> 
+          
+          <img class="imgupld" src="img/file-upload-svgrepo-com.svg"><p id="textt">Select your Resume</p>
+      </div>
+  </label>
+  <div id="file-upload-filename" onload="document.innerHTML(fileName)"></div><br><br>
+  <input type="submit">
+</form>
+    </body>
+    </html>

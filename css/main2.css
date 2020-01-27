@@ -1,0 +1,168 @@
+body{
+    background-color: #1CC8E3;
+}
+.logoo{
+     width: 170px;
+     height: 100px;
+     padding-left: 41%;
+     
+}
+.title{
+	font-family: Microsoft YaHei UI;
+	font-size: 32px;
+	letter-spacing: 3px;
+	padding-left: 547px;
+}
+.line{
+	width: 300px;
+	height: 2px;
+	background-color:#C8E31C ;
+	top:-30px;
+	left:520px;
+	position: relative;
+}
+#firstt{
+    left:-25px;
+    position: relative;
+}
+label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+
+}
+input{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    font-family: Microsoft Yahei UI;
+    font-size: 15px;
+}
+input[type=submit]{
+    width: 700px;
+    height: 30px;
+    border: none;
+    border-radius: 0px;
+    color:white;
+    background-color: #C8E31C;
+    font-weight: bold;
+    font-family: Microsoft Yahei UI;
+    font-size: 15px;
+}
+.submit2{
+    left: -400px;
+    position: absolute;
+}
+input[type=file]{
+    opacity: 0;
+    
+}
+form{
+    margin-left: 300px;
+    margin-top: 50px;
+}
+
+#lastname{
+    top:269px;
+    left:710px;
+    position: absolute;
+}
+#telephone{
+    top:356px;
+    left:710px;
+    position: absolute;
+}
+#cpassword{
+    left:710px;
+    top:443px;
+    position: absolute;
+}
+#degree{
+    top:567px;
+    left:710px;
+    position:absolute;
+}
+div.circle1 {
+    background: #C8E31C;
+    border-radius: 12em;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    font-family: Microsoft YaHei UI;
+    line-height: 1.8em;
+    margin-right: 5px;
+    text-align: center;
+    width: 1.9em; 
+  }
+  .circle11{
+    left:100px;
+    position: absolute;
+  }
+  #stepp1{
+      left:140px;
+      top:-18px;
+      font-size: 20px;
+      font-family: Microsoft Yahei UI;
+      letter-spacing: 3px;
+      position: absolute;
+      width: 400px;
+  }
+  .reg1{
+    left:430px;
+    position:absolute;
+  }
+  .academia{
+      top:50px;
+      position: absolute;
+  }
+  .file-upload{
+    width: 667px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    font-family: Microsoft Yahei UI;
+    font-size: 15px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.imgupld{
+    width: 50px;
+    height: 40px;
+    fill: #C8E31C;
+    top:1px;
+    left:660px;
+    position: relative;
+}
+#file-upload-filename{
+    font-size: 50px;
+}
+#textt{
+    top:-50px;
+    position: relative;
+    font-family: Microsoft Yahei UI;
+    font-size: 15px;
+    opacity:.5;
+}
+#copyrightss{
+	width: 1366px;
+	height: 40px;
+	background-color: black;
+	margin-left:-410px;
+	top:182px;
+	position: relative;
+	color: #C8E31C;
+	font-family: Microsoft YaHei UI;
+	font-size: 15px;
+}
+#copy
+{
+	top:-5px;
+	left:580px;
+	position: absolute;
+}
+#copy a{
+	text-decoration: none;
+	color: #C8E31C;
+}
