@@ -150,7 +150,7 @@ div.circle1 {
 	height: 40px;
 	background-color: black;
 	margin-left:-410px;
-	top:182px;
+top:182px;
 	position: relative;
 	color: #C8E31C;
 	font-family: Microsoft YaHei UI;
@@ -165,4 +165,21 @@ div.circle1 {
 #copy a{
 	text-decoration: none;
 	color: #C8E31C;
+}
+#alt{
+	top:420px;
+	left:480px;
+	position: absolute;
+	font-family: Microsoft YaHei UI;
+	font-size: 17px;
+	color: white;
+	letter-spacing: 5px;
+}
+#alt a{
+	text-decoration-line: none;
+	color: #C8E31C;
+}
+#alls{
+    top:10px;
+    position: absolute;
 }
