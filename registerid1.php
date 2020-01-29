@@ -24,25 +24,25 @@
 </div>
 
 
-<form method="post" action="registerid1.php" class="forrm">
+<form method="post" action="registerid1.php" class="forrm" enctype="multipart/form-data">
     <!-- Persona details -->
     <label for="">First name</label><br>
-    <input name="firstname" type="text"><br>
+    <input name="firstname" type="text" required><br>
     <div id="lastname">
     <label for="">Last Name</label><br>
-    <input name="lastname" type="text"><br>
+    <input name="lastname" type="text" required><br>
 </div><br><br>
 <label for="">E-mail</label><br>
-<input name="email" type="email"><br>
+<input name="email" type="email" required><br>
 <div id="telephone">
 <label for="">Telephone</label><br>
-<input name="telephone" type="tel"><br>
+<input name="telephone" type="tel" required><br>
 </div><br><br>
 <label for="">Password</label><br>
-<input name="password" type="password"><br>
+<input name="password" type="password" required><br>
 <div id="cpassword">
 <label>Confirm Password</label><br>
-<input name="confirmpassword" type="password"></div><br><br>
+<input name="confirmpassword" type="password" required></div><br><br>
 <!-- Academic details -->
 <div class="reg1">
     <div class="circle1 circle11">2</div>
@@ -50,20 +50,20 @@
 </div><br><br>
 <section id="academia">
 <label>Current University</label><br>
-<input name="currentuniv" type="text">
+<input name="currentuniv" type="text" required>
 <div id="degree">
 <label>Degree</label><br>
 <input name="degree" type="text">
 
 </div><br><br>
 <label>Graduation Year</label><br>
-<input name="graduation" type="month"><br><br>
+<input name="graduation" type="month" required><br><br>
 </section>
 <div class="reg1">
     <div class="circle1 circle11">3</div>
     <p id="stepp1">Resume Upload</p>
 </div><br>
-<input name="Resume" type="file" id="file-upload">
+<input name="Resume" type="file" id="file-upload" accept="application/pdf" required>
   <label for="file-upload">
       <div class="file-upload"> 
           

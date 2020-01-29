@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,15 +17,15 @@
    <p class="title" style="padding-left: 620px;">Login</p>
     <div class="line"></div>
 </div>
-<form style="left:205px;position: absolute;;top: 190px;">
+<form style="left:205px;position: absolute;;top: 190px;" method=post action=loginid1.php>
     <label for="">E-mail</label><br>
-    <input type="text"><br><br>
+    <input type="email" name="email"><br><br>
     <label for="">Password</label><br>
-    <input type="password"><br>
-    <input type="submit" style="width: 250px;left:24px;position: absolute;top:140px;" value="Login">
+    <input type="password" name="password"><br>
+    <input type="submit" style="width: 250px;left:24px;position: absolute;top:140px;" value="Login" name="login">
 
 </form>
-<p id="alt">I have no account,<a href="registerid1.html">Register</a></p>
+<p id="alt">I have no account,<a href="registerid1.php">Register</a></p>
 <div id="copyrightss" class="posts" style="display: block; left: 410px;position:absolute;top:625px" >
     <p id="copy">Copyrights <a target="_blank" href="http://talentmatch.rw/">TalentMatch.inc</a></p>
 </div>

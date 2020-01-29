@@ -191,3 +191,23 @@ nav{
 	text-decoration: none;
 	color: #C8E31C;
 }
+.error {
+    width: 92%; 
+    margin: 0px auto; 
+    padding: 10px; 
+    border: 1px solid #a94442; 
+    color: #a94442; 
+    background: #f2dede; 
+    border-radius: 5px; 
+    text-align: left;
+  }
+  .updateform{
+      /* display: none; */
+      background-color: lawngreen;
+      width:400px;
+      height:400px;
+      left:1000px;
+      top:-700px;
+      position: relative;
+
+  }
