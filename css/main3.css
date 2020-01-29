@@ -1,0 +1,193 @@
+#header{
+    background-color: whitesmoke;
+    width: 1349px;
+    height: 90px;
+    top:-1px;
+    
+}
+header{
+    position: fixed;
+    z-index: 100;
+}
+body{
+    background-color: thistle;
+    margin: 0px;
+}
+.logo{
+    width: 120px;
+    height: 70px;
+    padding-top: 9px;
+    margin-left: 10px;
+}
+#smallpp{
+    width: 30px;
+    height: 30px;
+    /* border-radius: 30px; */
+    top:-20px;
+    position: relative;
+    padding-left: 1080px;
+}
+.myaccount{
+    color:rosybrown;
+    font-weight: bold;
+    font-family: Microsoft Yahei UI;
+    font-size: 15px;
+    top:-28px;
+    left:-5px;
+    position: relative;
+}
+.links{
+    color:whitesmoke;
+    font-family: Microsoft Yahei UI;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 40px;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px dotted whitesmoke;
+    width: initial;
+    height: auto;
+    padding-bottom: 20px;
+    top: -5px;
+    position: relative;
+    letter-spacing: 4px;
+}
+.links.active{
+    background-color:lawngreen;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+}
+nav{
+    flex-direction: column;
+    margin-top: 35px;
+    top:-30px;
+    position: relative;
+}
+.links:hover{
+    background-color: lawngreen;
+}
+.navigation{
+    width:300px;
+    height:fit-content auto;
+    background-color: rosybrown;
+    top: 90px;
+    position: fixed;
+}
+.profilepic{
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+    top:10px;
+    left:95px;
+    position: relative;
+}
+.portfolio{
+    background-color: lavenderblush;
+    width: 300px;
+    height: 400px;
+    box-shadow: lawngreen;
+    left:330px;
+    top:195px;
+    position:absolute;
+}
+#nameoftheperson{
+    color: lightgreen;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Microsoft Yahei UI;
+   text-align: center;
+}
+#titleoftheperson{
+    font-size: 15px;
+    font-family: Microsoft Yahei UI;
+    padding-left: 10px;
+}
+#usernameoftheperson{
+    font-size: 15px;
+    font-family: Microsoft Yahei UI;
+    padding-left: 10px;
+}
+#schooloftheperson{
+    font-size: 15px;
+    font-family: Microsoft Yahei UI;
+    padding-left: 10px;
+}
+#facultyoftheperson{
+    font-size: 15px;
+    font-family: Microsoft Yahei UI;
+    padding-left: 10px;
+}
+#locationoftheperson{
+    font-size: 15px;
+    font-family: Microsoft Yahei UI;
+    padding-left: 10px;
+}
+.btn{
+    border-radius: 2px;
+    background-color: lawngreen;
+    color: white;
+    border: none;
+    font-size: 15px;
+    height: 30px;
+    margin-left: 27px;
+    margin-top:20px;
+}
+.aboutmediv{
+      width: 550px;
+      height: 300px;
+      background-color:rosybrown;
+      left: 780px;
+      top:100px;
+      position: relative;
+      border-radius: 10px;
+}
+#titlediv{
+    font-family: Microsoft Yahei UI;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.edit{
+    margin-left: 480px;
+    top:-13px;
+    position: absolute;
+    width:50px;
+    height: 25px;
+}
+#abouttext{
+    padding-top: 10px;
+    padding-left: 20px;
+    width: auto;
+    font-family: Microsoft Yahei UI;
+    font-size: 14px;
+}
+#toptitle{
+    background-color: white;
+    width: inherit;
+    height: 15%;
+
+}
+#copyrightss{
+	width: 1366px;
+	height: 40px;
+	background-color: black;
+	margin-left:-410px;
+	color: #C8E31C;
+	font-family: Microsoft YaHei UI;
+    font-size: 15px;
+    top:200px;
+    position: absolute;
+}
+#copy
+{
+	top:-5px;
+	left:580px;
+	position: absolute;
+}
+#copy a{
+	text-decoration: none;
+	color: #C8E31C;
+}

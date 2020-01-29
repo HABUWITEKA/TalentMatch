@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,24 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pleased to welcome you</title>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main2.css'>
-    <script>
-    var input = document.getElementById( 'file-upload' );
-var infoArea = document.getElementById( 'file-upload-filename' );
-
-// input.addEventListener( 'change', showFileName );
-
-function showFileName( event ) {
-  
-  // the change event gives us the input it occurred in 
-  var input = event.srcElement;
-  
-  // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
-  var fileName = input.files[0].name;
-  
-  // use fileName however fits your app best, i.e. add it into a div
-  infoArea.textContent = 'File name: ' + fileName;
-}
-</script>
+    
 </head>
 <body>
    <!-- talentmatch logo -->
@@ -40,25 +24,25 @@ function showFileName( event ) {
 </div>
 
 
-<form action="" class="forrm">
+<form method="post" action="registerid1.php" class="forrm">
     <!-- Persona details -->
     <label for="">First name</label><br>
-    <input type="text"><br>
+    <input name="firstname" type="text"><br>
     <div id="lastname">
     <label for="">Last Name</label><br>
-    <input type="text"><br>
+    <input name="lastname" type="text"><br>
 </div><br><br>
 <label for="">E-mail</label><br>
-<input type="email"><br>
+<input name="email" type="email"><br>
 <div id="telephone">
 <label for="">Telephone</label><br>
-<input type="tel"><br>
+<input name="telephone" type="tel"><br>
 </div><br><br>
 <label for="">Password</label><br>
-<input type="password"><br>
+<input name="password" type="password"><br>
 <div id="cpassword">
 <label>Confirm Password</label><br>
-<input type="password"></div><br><br>
+<input name="confirmpassword" type="password"></div><br><br>
 <!-- Academic details -->
 <div class="reg1">
     <div class="circle1 circle11">2</div>
@@ -66,20 +50,20 @@ function showFileName( event ) {
 </div><br><br>
 <section id="academia">
 <label>Current University</label><br>
-<input type="text">
+<input name="currentuniv" type="text">
 <div id="degree">
 <label>Degree</label><br>
-<input type="text">
+<input name="degree" type="text">
 
 </div><br><br>
 <label>Graduation Year</label><br>
-<input type="month"><br><br>
+<input name="graduation" type="month"><br><br>
 </section>
 <div class="reg1">
     <div class="circle1 circle11">3</div>
     <p id="stepp1">Resume Upload</p>
 </div><br>
-<input type="file" id="file-upload">
+<input name="Resume" type="file" id="file-upload">
   <label for="file-upload">
       <div class="file-upload"> 
           
@@ -87,7 +71,7 @@ function showFileName( event ) {
       </div>
   </label>
   <div id="file-upload-filename" onload="document.innerHTML(fileName)"></div><br><br>
-  <input type="submit">
+  <input name="submit" type="submit">
 </form>
 <div id="copyrightss" class="posts" style="top:870px;position:absolute;left:392px;" >
     <p id="copy">Copyrights <a target="_blank" href="http://talentmatch.rw/">TalentMatch.inc</a></p>
