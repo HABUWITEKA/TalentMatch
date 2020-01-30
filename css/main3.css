@@ -10,7 +10,7 @@ header{
     z-index: 100;
 }
 body{
-    background-color: thistle;
+    background-color: #1CC8E3;
     margin: 0px;
 }
 .logo{
@@ -28,12 +28,12 @@ body{
     padding-left: 1080px;
 }
 .myaccount{
-    color:rosybrown;
+    color: rgba(89, 3, 11, 0.82) ;
     font-weight: bold;
     font-family: Microsoft Yahei UI;
     font-size: 15px;
     top:-28px;
-    left:-5px;
+    left:5px;
     position: relative;
 }
 .links{
@@ -53,7 +53,7 @@ body{
     letter-spacing: 4px;
 }
 .links.active{
-    background-color:lawngreen;
+    background-color:#C8E31C;
 }
 .icon{
     width: 20px;
@@ -66,13 +66,14 @@ nav{
     position: relative;
 }
 .links:hover{
-    background-color: lawngreen;
+    background-color: #C8E31C;
 }
 .navigation{
     width:300px;
     height:fit-content auto;
-    background-color: rosybrown;
-    top: 90px;
+    background-color: transparent;
+    border-right: 1px solid #C8E31C;
+    top: 89px;
     position: fixed;
 }
 .profilepic{
@@ -87,8 +88,8 @@ nav{
     background-color: lavenderblush;
     width: 300px;
     height: 400px;
-    box-shadow: lawngreen;
-    left:330px;
+    box-shadow: #C8E31C;
+    left:390px;
     top:195px;
     position:absolute;
 }
@@ -126,7 +127,7 @@ nav{
 }
 .btn{
     border-radius: 2px;
-    background-color: lawngreen;
+    background-color: #C8E31C;
     color: white;
     border: none;
     font-size: 15px;
@@ -137,9 +138,9 @@ nav{
 .aboutmediv{
       width: 550px;
       height: 300px;
-      background-color:rosybrown;
+      background-color:whitesmoke;
       left: 780px;
-      top:100px;
+      top:50px;
       position: relative;
       border-radius: 10px;
 }
@@ -203,7 +204,7 @@ nav{
   }
   .updateform{
       /* display: none; */
-      background-color: lawngreen;
+      background-color: #C8E31C;
       width:400px;
       height:400px;
       left:1000px;

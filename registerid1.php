@@ -11,7 +11,7 @@
 </head>
 <body>
    <!-- talentmatch logo -->
-   <img src="img/talent.png" class="logoo">
+   <a href="index.php"><img src="img/talent.png" class="logoo"></a>
    <!-- Register form addon -->
    <div id="firstt">
    <p class="title">Register Form</p>
@@ -69,12 +69,14 @@
           
           <img class="imgupld" src="img/file-upload-svgrepo-com.svg"><p id="textt">Select your Resume</p>
       </div>
-  </label>
-  <div id="file-upload-filename" onload="document.innerHTML(fileName)"></div><br><br>
+  </label><br><br>
   <input name="submit" type="submit">
-</form>
-<div id="copyrightss" class="posts" style="top:870px;position:absolute;left:392px;" >
+  <p id="alt" style="top:850px;position:absolute;left:460px;">I have been here before,<a href="loginid1.php">login</a></p>
+  <div id="copyrightss" class="posts" style="top:50px;position:relative;left:85px;" >
     <p id="copy">Copyrights <a target="_blank" href="http://talentmatch.rw/">TalentMatch.inc</a></p>
 </div>
+</form>
+<!-- <p id="alt" style="top:200px;position:relative">I have been here before,<a href="loginid1.php">login</a></p> -->
+
     </body>
     </html>

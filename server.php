@@ -1,11 +1,5 @@
 <?php
 session_start();
-
-// initializing variables
-$username = "";
-$email    = "";
-$errors = array(); 
-
 // connect to the database
 $db = mysqli_connect('localhost', 'HABUWITEKA', '17170', 'talentmatch');
 
@@ -77,9 +71,25 @@ if (isset($_POST['login'])) {
       $_SESSION['email'] = $email;
       header('location: dashboard1.php');
     }else {
-      header('location: intro.html');
+      header('location: loginid1.html');
+      echo "Login failed";
     }
   }
 }
+
+//logout
+if (isset($_POST['logout'])) {
+  session_start();
+  session_destroy();
+  header('location:index.php');
+
+}
+
+//update and saving
+if (isset($_POST['update'])) {
+  
+}
+ 
+
 
 ?>

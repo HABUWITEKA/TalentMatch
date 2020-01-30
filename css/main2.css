@@ -30,7 +30,7 @@ label{
     font-size: 15px;
 
 }
-input{
+/* input{
     width: 300px;
     height: 30px;
     border-radius: 5px;
@@ -38,7 +38,7 @@ input{
     color: black;
     font-family: Microsoft Yahei UI;
     font-size: 15px;
-}
+} */
 input[type=submit]{
     width: 700px;
     height: 30px;
@@ -54,10 +54,7 @@ input[type=submit]{
     left: -400px;
     position: absolute;
 }
-input[type=file]{
-    opacity: 0;
-    
-}
+
 form{
     margin-left: 300px;
     margin-top: 50px;
@@ -175,6 +172,10 @@ top:182px;
 	color: white;
 	letter-spacing: 5px;
 }
+/* #altid1{
+   top:300px;
+   position: absolute;
+} */
 #alt a{
 	text-decoration-line: none;
 	color: #C8E31C;
