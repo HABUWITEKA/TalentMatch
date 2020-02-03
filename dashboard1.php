@@ -74,6 +74,7 @@ if (isset($_POST['update'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/main3.css">
+    <script type="text/javascript" src="js/java.js"></script>
     <!-- For edit scrioopt -->
     <script>
         function edittoggle() {
@@ -119,18 +120,26 @@ if (isset($_POST['update'])) {
   <section class="navigation">
     <!-- Vertical fixed navigation bar -->
     <nav>
-        <a href="#" class="links active"><img class="icon" src="img/business.png">&nbspAbout Me</a>
-        <a href="#" class="links"><img class="icon" src="img/business.png">&nbspApplications</a>
-        <a href="#" class="links"><img class="icon" src="img/business.png">&nbspJobs</a>
-        <a href="#" class="links"><img class="icon" src="img/business.png">&nbspInternships</a>
-        <a href="#" class="links"><img class="icon" src="img/business.png">&nbspResources</a>
-        <a href="#" class="links"><img class="icon" src="img/business.png">&nbspEvents</a>
-        <a href="#" class="links"><img class="icon" src="img/business.png">&nbspCalendar</a>
+        <a href="#" class="links active" onclick="displayaboutme()"><img class="icon" src="img/business.png">&nbspAbout Me</a>
+        <a href="#" class="links" onclick="displayapplications()"><img class="icon" src="img/business.png">&nbspApplications</a>
+        <a href="#" class="links" onclick="displayjobs()"><img class="icon" src="img/business.png">&nbspJobs</a>
+        <a href="#" class="links" onclick="displayinternships()"><img class="icon" src="img/business.png">&nbspInternships</a>
+        <a href="#" class="links" onclick="displayresources()"><img class="icon" src="img/business.png">&nbspResources</a>
+        <a href="#" class="links" onclick="displayaboutme()"><img class="icon" src="img/business.png">&nbspEvents</a>
+        <a href="#" class="links" onclick="displayaboutme()"><img class="icon" src="img/business.png">&nbspCalendar</a>
     </nav>
-</section></header> 
+</section>
+</header> 
 <!-- Profile and ability to change -->
+<div id="aboutme">
 <div class="portfolio" style="position: fixed;">
-    <img src="img/prostudent.png" class="profilepic">
+   <div class ="container" >
+ <img src="img/prostudent.png" class="profilepic">
+ <div class="text">
+ <a href="#formtoupload" class="uploadpc" onclick="picturepic()">Upload<br>Picture</a> 
+</div>
+<input type="file" name="" id="formtoupload">
+</div>
     <p id="nameoftheperson">
      <?php echo $row['firstname']." ".$row['lastname'] ?>
     </p>
@@ -156,7 +165,7 @@ if (isset($_POST['update'])) {
         <a id="location">Kigali</a>
     </p>
     <button class="btn">Update Resume</button>
-    <button class="btn">Update Info</button>
+    <button class="btn updatebtnn" onclick="updatepop()">Update Info</button>
 </div>
 <div class="aboutmediv">
     <div id="toptitle">
@@ -212,7 +221,7 @@ if (isset($_POST['update'])) {
 </div>
 
 <!-- In the case the user wants to update his informationn and we update it in the database -->
-<form action="dashboard1.php" class="updateform" method="post" name="updateinfo">
+<form action="dashboard1.php" class="updateform" method="post" name="updateinfo" id="updateform">
     <label>First Name:</label><br>
     <input type="text" name="fname" value="<?php echo $row['firstname'] ?>"><br>
     <label>Last Name:</label><br>
@@ -225,7 +234,27 @@ if (isset($_POST['update'])) {
     <input type="text" name="degree2" value="<?php echo $row['Degree']; ?>"><br>
     <label>Graduation Date:</label><br>
     <input type="month" name="graduation2" value="<?php echo $row['Graduation']; ?>" ><br><br>
-    <input type="submit" name="update" value="update">
+    <input type="submit" name="update" value="Update" class="btn updatebtn" onclick="updatepop()">
+    <button class="btn cancel" onclick="updatedpop()">Cancel</button>
 </form>
+</div>
+
+<!-- Application corner and own applications at a glance -->
+<div id="applications">
+    <!-- filters all related to type of the job -->
+    <h1 style="top:200px;position: absolute;">Applications corner</h1>
+</div>
+<div id="jobs">
+    <!-- filters all related to type of the job -->
+    <h1 style="top:200px;position: absolute;">Jobs corner</h1>
+</div>
+<div id="Internships">
+    <!-- filters all related to type of the job -->
+    <h1 style="top:200px;position: absolute;">Internship corner</h1>
+</div>
+<div id="Resources">
+    <!-- filters all related to type of the job -->
+    <h1 style="top:200px;position: absolute;">Resources corner</h1>
+</div>
 </body>
 </html>

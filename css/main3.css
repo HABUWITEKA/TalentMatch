@@ -82,8 +82,34 @@ nav{
     border-radius: 30px;
     top:10px;
     left:95px;
+    opacity: 1;
     position: relative;
 }
+.text{
+  opacity: 0;
+}
+.container:hover .profilepic{
+    opacity: 0.3;
+}
+.container:hover .text{
+    opacity: 1;
+}
+.uploadpc{
+    text-decoration: none;
+    top:43px;
+    position: absolute;
+    margin-left: 122px;
+    font-family: Microsoft YaHei UI;
+    font-size: 13px;
+    color: #1CC8E3;
+    width: 100%;
+    opacity: 1;
+    font-weight: bold;
+}
+#pp{
+    opacity: 1;
+}
+
 .portfolio{
     background-color: lavenderblush;
     width: 300px;
@@ -140,7 +166,7 @@ nav{
       height: 300px;
       background-color:whitesmoke;
       left: 780px;
-      top:50px;
+      top:90px;
       position: relative;
       border-radius: 10px;
 }
@@ -204,30 +230,33 @@ nav{
   }
 
 #editarea{
-      top:145px;
+      top:149px;
       left:780px;
-      width:550px;
+      width:540px;
       position:absolute;
-      background-color: lightcoral;
+      /*background-color: lightcoral;*/
       display: none;
   }
   #editarea2{
-    top:460px;
+    top:464px;
     left:780px;
     position: absolute;
-    background-color: lightcoral;
+    /*background-color: lightcoral;*/
     display: none;
   }
   #editarea3{
-    top:775px;
+    top:779px;
     left:780px;
     position: absolute;
-    background-color: lightcoral;
+/*background-color: lightcoral;*/
     display: none;
   }
   #editedbio{
-    width:550px;
-    height: 230px;
+    width:545px;
+    height: 250px;
+    resize: none;
+    font-family: Microsoft YaHei UI;
+    animation-delay: .3;
   }
   #savebutton{
     left:0px;
@@ -236,9 +265,74 @@ nav{
   }
 
   .updateform{
-    left:690px;
-    top: 270px;
+    left:440px;
+    top: 240px;
     position: absolute;
     background-color: #C8E31C;
+    border:1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 18px #888888;
+    transform: scale(1.5,1.5);
   }
-  
+  #updateform{
+    display: none;
+  }
+  label{
+    font-family: Microsoft YaHei UI;
+    font-size: 15px;
+  }
+  input{
+    border-radius: 5px;
+    border: none;
+    color: black;
+    font-family: Microsoft Yahei UI;
+    font-size: 15px;
+  }
+  input[type=submit]{
+    background-color: #1CC8E3;
+  }
+
+  .cancel{
+    background-color: black;
+    left:-20px;
+    position: relative;
+  }
+  .updatebtn{
+    left:-10px;
+    position: relative;
+  }
+
+  /*fpr profile picture*/
+
+  .container{
+
+  }
+
+
+
+  #applications{
+    display: none;
+  }
+  #aboutme{
+    display: block;
+  }
+   #jobs{
+    display: none;
+  }
+  #Internships{
+    display: none;
+  }
+   #Resources{
+    display: none;
+  }
+  #aboutme{
+    display: block;
+  }
+  #formtoupload{
+    /*display: none;*/
+    width: 300px;
+    height: 100px;
+    background-color: red;
+    transform: scale(1,1);
+    display: none;
+  }
