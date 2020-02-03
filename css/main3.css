@@ -202,13 +202,43 @@ nav{
     border-radius: 5px; 
     text-align: left;
   }
-  .updateform{
-      /* display: none; */
-      background-color: #C8E31C;
-      width:400px;
-      height:400px;
-      left:1000px;
-      top:-700px;
-      position: relative;
 
+#editarea{
+      top:145px;
+      left:780px;
+      width:550px;
+      position:absolute;
+      background-color: lightcoral;
+      display: none;
   }
+  #editarea2{
+    top:460px;
+    left:780px;
+    position: absolute;
+    background-color: lightcoral;
+    display: none;
+  }
+  #editarea3{
+    top:775px;
+    left:780px;
+    position: absolute;
+    background-color: lightcoral;
+    display: none;
+  }
+  #editedbio{
+    width:550px;
+    height: 230px;
+  }
+  #savebutton{
+    left:0px;
+    top:-57px;
+    position: absolute;
+  }
+
+  .updateform{
+    left:690px;
+    top: 270px;
+    position: absolute;
+    background-color: #C8E31C;
+  }
+  

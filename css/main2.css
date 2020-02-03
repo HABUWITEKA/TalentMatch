@@ -30,7 +30,7 @@ label{
     font-size: 15px;
 
 }
-/* input{
+input{
     width: 300px;
     height: 30px;
     border-radius: 5px;
@@ -38,7 +38,7 @@ label{
     color: black;
     font-family: Microsoft Yahei UI;
     font-size: 15px;
-} */
+}
 input[type=submit]{
     width: 700px;
     height: 30px;

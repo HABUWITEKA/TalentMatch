@@ -1,31 +1,67 @@
 <?php
-session_start();
+//session_start();
 include('server.php');
 $email=$_SESSION['email'];
 $dbconnect=mysqli_connect('localhost', 'HABUWITEKA', '17170', 'talentmatch');
 $query = mysqli_query($dbconnect, "SELECT * FROM studentusers where email='$email'");
 $row = mysqli_fetch_assoc($query);
+//saving
+if (isset($_POST['Save'])) {
+   $abouttext = mysqli_real_escape_string($dbconnect,$_POST['editedbio']);
+   $saveit = "UPDATE studentusers SET Aboutme = '$abouttext' WHERE email='$email'";
+   mysqli_query($dbconnect, $saveit);
+   header('location:dashboard1.php');
+}
+if (isset($_POST['Save2'])) {
+   $aboutskills = mysqli_real_escape_string($dbconnect,$_POST['editedskills']);
+   $saveit2 = "UPDATE studentusers SET Skills = '$aboutskills' WHERE email='$email'";
+   mysqli_query($dbconnect, $saveit2);
+   header('location:dashboard1.php');
+}
+if (isset($_POST['Save3'])) {
+   $aboutinterests = mysqli_real_escape_string($dbconnect,$_POST['editedinterests']);
+   $saveit3 = "UPDATE studentusers SET Interests = '$aboutinterests' WHERE email='$email'";
+   mysqli_query($dbconnect, $saveit3);
+   header('location:dashboard1.php');
+}
 
+//Update student info
 if (isset($_POST['update'])) {
-    # code...
-    //update from form
-      $emaill = $_POST['emaill'];
-      $lname = $_POST['lname'];
-      $fname = $_POST['fname'];
-
-      // mysql query to Update data
-   $query_update = "UPDATE `studentusers` SET `firstname`='".$fname."',`lastname`='".$lname."' WHERE `email` = $emaill";
-   $result = mysqli_query($dbconnect, $query_update);
-   if ($result)
-    {
-         # code...{
-       echo 'Data Updated';
-    }
-    else{
-        echo 'Data Not Updated';
-    }
-         mysqli_close($dbconnect);
-   }
+    $updatedfirstname = mysqli_real_escape_string($dbconnect, $_POST['fname']);
+    $update1= "UPDATE studentusers SET firstname = '$updatedfirstname' WHERE email='$email'";
+    mysqli_query($dbconnect, $update1);
+    header('location:dashboard1.php');
+}
+if (isset($_POST['update'])) {
+    $updatedlastname = mysqli_real_escape_string($dbconnect, $_POST['lname']);
+    $update2= "UPDATE studentusers SET lastname = '$updatedlastname' WHERE email='$email'";
+    mysqli_query($dbconnect, $update2);
+    header('location:dashboard1.php');
+}
+if (isset($_POST['update'])) {
+    $updatedemail = mysqli_real_escape_string($dbconnect, $_POST['emaill']);
+    $update3= "UPDATE studentusers SET email = '$updatedemail' WHERE email='$email'";
+    mysqli_query($dbconnect, $update3);
+    header('location:dashboard1.php');
+}
+if (isset($_POST['update'])) {
+    $updateduniv = mysqli_real_escape_string($dbconnect, $_POST['currentt']);
+    $update4= "UPDATE studentusers SET Currentuniv = '$updateduniv' WHERE email='$email'";
+    mysqli_query($dbconnect, $update4);
+    header('location:dashboard1.php');
+}
+if (isset($_POST['update'])) {
+    $updatedfac = mysqli_real_escape_string($dbconnect, $_POST['degree2']);
+    $update5= "UPDATE studentusers SET Degree = '$updatedfac' WHERE email='$email'";
+    mysqli_query($dbconnect, $update5);
+    header('location:dashboard1.php');
+}
+if (isset($_POST['update'])) {
+    $updatedgraddate = mysqli_real_escape_string($dbconnect, $_POST['graduation2']);
+    $update6= "UPDATE studentusers SET Current = '$updatedgraddate' WHERE email='$email'";
+    mysqli_query($dbconnect, $update6);
+    header('location:dashboard1.php');
+}
 ?>
   
 <!-- update php script -->
@@ -38,6 +74,42 @@ if (isset($_POST['update'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/main3.css">
+    <!-- For edit scrioopt -->
+    <script>
+        function edittoggle() {
+            var x = document.getElementById("editarea");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            }
+            else{
+                x.style.display = "none";
+                //alert("Your bio saved successful");
+            } // body...
+        }
+
+        function edittoggle2() {
+            var x = document.getElementById("editarea2");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            }
+            else{
+                x.style.display = "none";
+                //alert("Your bio saved successful");
+            } // body...
+        }
+
+        function edittoggle3() {
+            var x = document.getElementById("editarea3");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            }
+            else{
+                x.style.display = "none";
+                //alert("Your bio saved successful");
+            } // body...
+        }
+
+    </script>
 </head>
 <body>
 <header id="header">
@@ -89,24 +161,58 @@ if (isset($_POST['update'])) {
 <div class="aboutmediv">
     <div id="toptitle">
     <p id="titlediv">About me/Bio</p>
-    <button class="edit btn">Edit</button></div>
-    <p id="abouttext">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+    <button class="edit btn" onclick="edittoggle()">Edit</button></div>
+    <p id="abouttext">
+        <?php
+         echo $row['Aboutme'];
+            ?>
+    </p>
 </div>
+<!-- EDIT BIOGRAPHY -->
+<div id="editarea">
+     <form method="post" action="dashboard1.php">
+         <textarea name="editedbio" id="editedbio" cols="30" rows="10"><?php echo $row['Aboutme'] ?></textarea>
+         <input type="submit" name="Save" id="savebutton" class="btn edit " value="Save" onclick="edittoggle()">
+     </form>
+</div>
+<!-- edit skilss -->
 <div class="aboutmediv">
     <div id="toptitle">
     <p id="titlediv">Skills</p>
-    <button class="edit btn">Edit</button></div>
-    <p id="abouttext">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+    <button class="edit btn" onclick="edittoggle2()" >Edit</button></div>
+    <p id="abouttext">
+         <?php
+         echo $row['Skills'];
+            ?>
+    </p>
 </div>
-
+<div id="editarea2">
+     <form method="post" action="dashboard1.php">
+         <textarea name="editedskills" id="editedbio" cols="30" rows="10"><?php echo $row['Skills'] ?></textarea>
+         <input type="submit" name="Save2" id="savebutton" class="btn edit " value="Save" onclick="edittoggle2()">
+     </form>
+     </form>
+</div>
+<!-- interests edit -->
 <div class="aboutmediv">
     <div id="toptitle">
     <p id="titlediv">Interests</p>
-    <button class="edit btn">Edit</button></div>
-    <p id="abouttext">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+    <button class="edit btn" onclick="edittoggle3()">Edit</button></div>
+    <p id="abouttext">
+         <?php
+         echo $row['Interests'];
+            ?>
+    </p>
 </div>
+<div id="editarea3">
+     <form method="post" action="dashboard1.php">
+         <textarea name="editedinterests" id="editedbio" cols="30" rows="10"><?php echo $row['Interests'] ?></textarea>
+         <input type="submit" name="Save3" id="savebutton" class="btn edit " value="Save" onclick="edittoggle3()">
+     </form>
+</div>
+
 <!-- In the case the user wants to update his informationn and we update it in the database -->
-<!-- <form action="dashboard1.php" method="post" name="updateinfo" class="updateform">
+<form action="dashboard1.php" class="updateform" method="post" name="updateinfo">
     <label>First Name:</label><br>
     <input type="text" name="fname" value="<?php echo $row['firstname'] ?>"><br>
     <label>Last Name:</label><br>
@@ -120,6 +226,6 @@ if (isset($_POST['update'])) {
     <label>Graduation Date:</label><br>
     <input type="month" name="graduation2" value="<?php echo $row['Graduation']; ?>" ><br><br>
     <input type="submit" name="update" value="update">
-</form> -->
+</form>
 </body>
 </html>

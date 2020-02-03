@@ -47,6 +47,10 @@ if (isset($_POST['submit'])) {
     // $_SESSION['success'] = "You are now logged in";
     header('location:loginid1.php');
   }
+  else
+  {
+    header('location:registerid1.php');
+  }
 }
 // ... 
 // ... 
@@ -71,7 +75,7 @@ if (isset($_POST['login'])) {
       $_SESSION['email'] = $email;
       header('location: dashboard1.php');
     }else {
-      header('location: loginid1.html');
+      header('location: loginid1.php');
       echo "Login failed";
     }
   }
@@ -85,11 +89,14 @@ if (isset($_POST['logout'])) {
 
 }
 
-//update and saving
-if (isset($_POST['update'])) {
-  
+///editing biography by student
+
+if (isset($_POST['Save'])) {
+   $abouttext = mysqli_real_escape_string($db,$_POST['editedbio']);
+   $saveit = "INSERT INTO studentusers(Aboutme) VALUES ('$abouttext') WHERE Email='$email'";
+   mysqli_query($db, $saveit);
 }
- 
+
 
 
 ?>

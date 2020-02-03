@@ -1,4 +1,12 @@
-<?php include('server.php') ?>
+<?php include('server.php') ;
+ if(isset($_FILES['Resume'])){
+    $file_name = $_FILES['Resume']['name'];
+    $file_size = $_FILES['Resume']['size'];
+    $file_tmp = $_FILES['Resume']['tmp_name'];
+    $file_type = $_FILES['Resume']['type'];
+ }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +15,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pleased to welcome you</title>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main2.css'>
-    
 </head>
 <body>
    <!-- talentmatch logo -->
@@ -24,7 +31,7 @@
 </div>
 
 
-<form method="post" action="registerid1.php" class="forrm" enctype="multipart/form-data">
+<form method="post" action="dashboard1.php" class="forrm" enctype="multipart/form-data">
     <!-- Persona details -->
     <label for="">First name</label><br>
     <input name="firstname" type="text" required><br>
@@ -63,20 +70,22 @@
     <div class="circle1 circle11">3</div>
     <p id="stepp1">Resume Upload</p>
 </div><br>
-<input name="Resume" type="file" id="file-upload" accept="application/pdf" required>
-  <label for="file-upload">
+<input  type="file" id="file-upload" name="Resume"  required>
+<p>
+</p>
+  <!-- <label for="file-upload">
       <div class="file-upload"> 
           
           <img class="imgupld" src="img/file-upload-svgrepo-com.svg"><p id="textt">Select your Resume</p>
       </div>
-  </label><br><br>
+  </label>
+  <div id="file-upload-filename" onload="document.innerHTML(fileName)"></div><br><br> -->
   <input name="submit" type="submit">
   <p id="alt" style="top:850px;position:absolute;left:460px;">I have been here before,<a href="loginid1.php">login</a></p>
   <div id="copyrightss" class="posts" style="top:50px;position:relative;left:85px;" >
     <p id="copy">Copyrights <a target="_blank" href="http://talentmatch.rw/">TalentMatch.inc</a></p>
 </div>
 </form>
-<!-- <p id="alt" style="top:200px;position:relative">I have been here before,<a href="loginid1.php">login</a></p> -->
 
     </body>
     </html>
