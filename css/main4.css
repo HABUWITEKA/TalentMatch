@@ -195,9 +195,9 @@ table td[data-label=Status]{
    position: absolute;
 }
 .jobscorner{
-  transform: scale(2,.95);
+  transform: scale(.9,.9);
   margin-left: 100px;
-  top:-300px;
+  top:-330px;
   position: absolute;
 }
 #Resources{
