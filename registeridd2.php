@@ -1,6 +1,3 @@
-<?php include('server2.php') ;
- 
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,4 +56,4 @@
     <p id="copy">Copyrights <a target="_blank" href="http://talentmatch.rw/">TalentMatch.inc</a></p>
 </div>
     </body>
-    </html>
+</html>
