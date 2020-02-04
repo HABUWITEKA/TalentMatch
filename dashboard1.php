@@ -156,16 +156,18 @@ if (isset($_POST['update'])) {
     <img src="img/talent.png" class="logo">
     <img src="<?php echo 'img/' . $row['profilepicture'] ?>" id="smallpp">
     <a class="myaccount" name="logout" href="logout.php" style="text-decoration:none">logout</a>
+    <div class="line">
+        
+    </div>
   <section class="navigation">
     <!-- Vertical fixed navigation bar -->
     <nav>
         <a href="#" class="links active" onclick="displayaboutme()"><img class="icon" src="img/propo.svg">&nbspAbout Me</a>
-        <a href="#" class="links" onclick="displayapplications()"><img class="icon" src="img/business.png">&nbspApplications</a>
-        <a href="#" class="links" onclick="displayjobs()"><img class="icon" src="img/business.png">&nbspJobs</a>
-        <a href="#" class="links" onclick="displayinternships()"><img class="icon" src="img/business.png">&nbspInternships</a>
-        <a href="#" class="links" onclick="displayresources()"><img class="icon" src="img/business.png">&nbspResources</a>
+        <a href="#" class="links" onclick="displayapplications()"><img class="icon" src="img/note.svg">&nbspApplications</a>
+        <a href="#" class="links" onclick="displayjobs()"><img class="icon" src="img/jobi.svg">&nbspJobs</a>
+        <a href="#" class="links" onclick="displayinternships()"><img class="icon" src="img/job.svg">&nbspInternships</a>
+        <a href="#" class="links" onclick="displayresources()"><img class="icon" src="img/resoure.svg">&nbspResources</a>
         <a href="#" class="links" onclick="displayaboutme()"><img class="icon" src="img/business.png">&nbspEvents</a>
-        <a href="#" class="links" onclick="displayaboutme()"><img class="icon" src="img/business.png">&nbspCalendar</a>
     </nav>
 </section>
 </header> 
@@ -179,7 +181,9 @@ if (isset($_POST['update'])) {
 </div>
 <form method="post" enctype="multipart/form-data" id="formtoupload">
     <input type="file" name="picture"  id="picture" onchange="displayImage(this)">
-    <input type="submit" name="upload" value="upload" id="upload">
+    <div id="allbtn">
+    <input type="submit" name="cancel" value="cancel" id="cancel" onclick="picturepic()">
+    <input type="submit" name="upload" value="upload" id="upload"></div>
 </form>
 </div>
     <p id="nameoftheperson">
@@ -206,8 +210,9 @@ if (isset($_POST['update'])) {
     <p id="locationoftheperson"><b>Location:</b>
         <a id="location">Kigali</a>
     </p>
+    <div style="top:-20px;position: relative;">
     <button class="btn">Update Resume</button>
-    <button class="btn updatebtnn" onclick="updatepop()">Update Info</button>
+    <button class="btn updatebtnn" onclick="updatepop()">Update Info</button></div>
 </div>
 <div class="aboutmediv">
     <div id="toptitle">

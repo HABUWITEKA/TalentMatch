@@ -130,7 +130,7 @@ table td[data-label=Status]{
   
 }
 .opcornerr{
-  transform: scale(.7,.7);
+  transform: scale(.9,.9);
   top:-300px;
   margin-left:110px;
   position: absolute;
@@ -195,7 +195,7 @@ table td[data-label=Status]{
    position: absolute;
 }
 .jobscorner{
-  transform: scale(.7,.7);
+  transform: scale(2,.95);
   margin-left: 100px;
   top:-300px;
   position: absolute;

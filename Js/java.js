@@ -96,6 +96,9 @@ function displayapplications(){
 function picturepic(){
 	var pic = document.getElementById("formtoupload");
 	pic.style.display="block";
+	if (pic.style.display==="block") {
+		pic.style.display = "none";
+	}
 }
 
 function triggerClick(e) {

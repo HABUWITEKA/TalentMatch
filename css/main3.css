@@ -58,13 +58,20 @@ body{
 .icon{
     width: 20px;
     height: 20px;
-    display: none;
 }
 nav{
     flex-direction: column;
     margin-top: 35px;
-    top:-30px;
+    top:15px;
     position: relative;
+}
+.line{
+  border:1px solid #C8E31C;
+  width: .2px;
+  height: 475px;
+  left:300px;
+  top:62px;
+  position: relative;
 }
 .links:hover{
     background-color: #C8E31C;
@@ -73,8 +80,8 @@ nav{
     width:300px;
     height:fit-content auto;
     background-color: transparent;
-    border-right: 1px solid #C8E31C;
-    top: 89px;
+    /*border-right: 1px solid #C8E31C;*/
+    top: 94px;
     position: fixed;
 }
 .profilepic{
@@ -334,5 +341,14 @@ nav{
   #upload{
     left:110px;
     top:10px;
+    position: relative;
+  }
+  #cancel{
+    left:-30px;
+    top:10px;
+    position: relative;
+  }
+  #allbtn{
+    left:40px;
     position: relative;
   }
