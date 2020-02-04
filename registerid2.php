@@ -1,29 +1,15 @@
+<?php include('server2.php') ;
+ 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pleased to have you!</title>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main2.css'>
-    <script>
-    var input = document.getElementById( 'file-upload' );
-var infoArea = document.getElementById( 'file-upload-filename' );
-
-// input.addEventListener( 'change', showFileName );
-
-function showFileName( event ) {
-  
-  // the change event gives us the input it occurred in 
-  var input = event.srcElement;
-  
-  // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
-  var fileName = input.files[0].name;
-  
-  // use fileName however fits your app best, i.e. add it into a div
-  infoArea.textContent = 'File name: ' + fileName;
-}
-</script>
 </head>
 <body>
    <!-- talentmatch logo -->
@@ -44,30 +30,30 @@ function showFileName( event ) {
 <form action="" class="forrm">
     <!-- Persona details -->
     <label for="">Company name</label><br>
-    <input type="text"><br>
+    <input type="text" name="companyname"><br>
     <div id="lastname">
     <label for="">Location</label><br>
-    <input type="text"><br>
+    <input type="text" name="location"><br>
 </div><br><br>
 <label for="">E-mail</label><br>
-<input type="email"><br>
+<input type="email" name="email"><br>
 <div id="telephone">
 <label for="">Telephone</label><br>
-<input type="tel"><br>
+<input type="tel" name="telephone"><br>
 </div><br><br>
 <label for="">Password</label><br>
-<input type="password"><br>
+<input type="password" name="password"><br>
 <div id="cpassword">
 <label>Confirm Password</label><br>
-<input type="password"><br>
-<input type="file" id="file-upload" accept="application/pdf" required><br>
+<input type="password" name="confirmedpassword"><br>
+<input type="file" id="file-upload" accept="application/pdf" name="companylogo" enctype="multipart/form-data" required ><br>
   <label for="file-upload">
       <div class="file-upload" style="left:-400px;position: absolute;">
           <img class="imgupld" src="img/file-upload-svgrepo-com.svg"><p id="textt">Upload company bio</p>
       </div>
   </label>
   <div id="file-upload-filename" onload="document.innerHTML(fileName)"></div><br><br><br>
-  <input type="submit" class="submit2">
+  <input type="submit" class="submit2" name="submitcompany">
 </form>
 <div id="copyrightss" class="posts" style="display: block; left: -300px;position:absolute" >
     <p id="copy">Copyrights <a target="_blank" href="http://talentmatch.rw/">TalentMatch.inc</a></p>

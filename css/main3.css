@@ -5,6 +5,7 @@
     top:-1px;
     
 }
+
 header{
     position: fixed;
     z-index: 100;
@@ -22,7 +23,7 @@ body{
 #smallpp{
     width: 30px;
     height: 30px;
-    /* border-radius: 30px; */
+    /*border-radius: 30px;*/
     top:-20px;
     position: relative;
     padding-left: 1080px;
@@ -51,10 +52,12 @@ body{
     top: -5px;
     position: relative;
     letter-spacing: 4px;
+    background: transparent;
 }
-.links.active{
-    background-color:#C8E31C;
+.links:active{
+  background-color: red;
 }
+
 .icon{
     width: 20px;
     height: 20px;
@@ -64,6 +67,24 @@ nav{
     margin-top: 35px;
     top:15px;
     position: relative;
+}
+#bckg1{
+  background: ;
+}
+#bckg2{
+  background: ;
+}
+#bckg3{
+  background: ;
+}
+#bckg4{
+  background: ;
+}
+#bckg5{
+  background: ;
+}
+#bckg6{
+  background: ;
 }
 .line{
   border:1px solid #C8E31C;
@@ -75,6 +96,9 @@ nav{
 }
 .links:hover{
     background-color: #C8E31C;
+}
+#active{
+  background: #C8E31C;
 }
 .navigation{
     width:300px;
@@ -329,7 +353,6 @@ nav{
     display: block;
   }
   #formtoupload{
-    /*display: none;*/
     width: 300px;
     height: 60px;
     background-color: #C8E31C;

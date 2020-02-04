@@ -1,11 +1,5 @@
 <?php include('server.php') ;
- if(isset($_FILES['Resume'])){
-    $file_name = $_FILES['Resume']['name'];
-    $file_size = $_FILES['Resume']['size'];
-    $file_tmp = $_FILES['Resume']['tmp_name'];
-    $file_type = $_FILES['Resume']['type'];
- }
-
+ 
 ?>
 <!DOCTYPE html>
 <html lang="en">

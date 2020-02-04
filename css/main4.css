@@ -12,6 +12,7 @@ table {
   table-layout: fixed;
   margin-left: 323px;
   margin-top: 250px;
+  font-family: Microsoft Yahei UI;
 }
 
 table caption {
@@ -129,33 +130,19 @@ table td[data-label=Status]{
    position: relative;
   
 }
-.opcornerr{
-  transform: scale(.9,.9);
-  top:-300px;
-  margin-left:110px;
-  position: absolute;
-}
 .postss{
-  width: 320px;
-  height: 300px;
-  background-color: #808080;
-  margin-left: 50px;
-  margin-top: 50px;
-  top:530px;
+  display:block;
+  left:250px;
+  top:140px;
   position: relative;
-   float: left;
-   overflow: visible;
-   border-radius: 5px;
-   left:200px;
-   position: relative;
-  
+  transform: scale(.8,.8);
+  /*margin-left: 50px;*/
+
 }
 .posts{
   overflow: hidden;
 }
-.postss{
-  display: block;
-}
+
 .posts :hover{
    cursor: grab;
 }
@@ -195,9 +182,9 @@ table td[data-label=Status]{
    position: absolute;
 }
 .jobscorner{
-  transform: scale(.9,.9);
+  transform: scale(.7,.7);
   margin-left: 100px;
-  top:-330px;
+  top:-300px;
   position: absolute;
 }
 #Resources{
@@ -208,7 +195,7 @@ table td[data-label=Status]{
    position: relative;
 }
 .box {
-  background: #fff;
+  background: #808080;
   border-radius: 2px;
   display: inline-block;
   height: 260px;
@@ -221,6 +208,7 @@ table td[data-label=Status]{
   font-weight: bold;
   font-family: Microsoft Yahei UI;
   padding-left: 25px;
+  color: #C8E31C;
 }
 .coursedesc{
   font-family: Microsoft Yahei UI;

@@ -109,7 +109,7 @@ if (isset($_POST['update'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard</title>
+    <title><?php echo $row['firstname']."'s". " "."Dashboard";  ?></title>
     <link rel="stylesheet" href="css/main3.css">
     <link rel="stylesheet" href="css/main4.css">
     <script type="text/javascript" src="js/java.js"></script>
@@ -162,12 +162,12 @@ if (isset($_POST['update'])) {
   <section class="navigation">
     <!-- Vertical fixed navigation bar -->
     <nav>
-        <a href="#" class="links active" onclick="displayaboutme()"><img class="icon" src="img/propo.svg">&nbspAbout Me</a>
-        <a href="#" class="links" onclick="displayapplications()"><img class="icon" src="img/note.svg">&nbspApplications</a>
-        <a href="#" class="links" onclick="displayjobs()"><img class="icon" src="img/jobi.svg">&nbspJobs</a>
-        <a href="#" class="links" onclick="displayinternships()"><img class="icon" src="img/job.svg">&nbspInternships</a>
-        <a href="#" class="links" onclick="displayresources()"><img class="icon" src="img/resoure.svg">&nbspResources</a>
-        <a href="#" class="links" onclick="displayaboutme()"><img class="icon" src="img/business.png">&nbspEvents</a>
+        <a href="#" class="links" id="bckg1" style="background:#C8E31C" onclick="displayaboutme()"><img class="icon" src="img/propo.svg">&nbspAbout Me</a>
+        <a href="#" class="links" id="bckg3" onclick="displayapplications()" onclick="classes()"><img class="icon" src="img/note.svg">&nbspApplications</a>
+        <a href="#" class="links" id="bckg2" onclick="displayjobs()" onclick="classes()" ><img class="icon" src="img/jobi.svg">&nbspJobs</a>
+        <a href="#" class="links" id="bckg4" onclick="displayinternships()" onclick="classes()"><img class="icon" src="img/job.svg">&nbspInternships</a>
+        <a href="#" class="links" id="bckg5" onclick="displayresources()" onclick="classes()"><img class="icon" src="img/resoure.svg">&nbspResources</a>
+        <a href="#" class="links" id="bckg6" onclick="displayaboutme()" onclick="classes()"><img class="icon" src="img/business.png">&nbspEvents</a>
     </nav>
 </section>
 </header> 
@@ -177,7 +177,7 @@ if (isset($_POST['update'])) {
    <div class ="container" >
  <img src="<?php echo 'img/' . $row['profilepicture'] ?>" class="profilepic" id="profiledisplay" onclick="triggerclick()">
  <div class="text">
- <a href="#formtoupload" class="uploadpc" onclick="picturepic()">Upload<br>Picture</a> 
+ <a href="#" class="uploadpc" onclick="picturepic()">Upload<br>Picture</a> 
 </div>
 <form method="post" enctype="multipart/form-data" id="formtoupload">
     <input type="file" name="picture"  id="picture" onchange="displayImage(this)">
@@ -424,47 +424,43 @@ if (isset($_POST['update'])) {
         }
         </script>
 </div>
-<div id="Internships">
-    <!-- filters all related to type of the job -->
-    <!-- <h1 style="top:200px;position: absolute;">Internship corner</h1> -->
-    <section class="opcornerr">
-        <div class="postss">
+<div id="Internships" class="intern">
+    <div class="posts postss">
             <p class="posttitle">Front End developer at<br>  TalentMatch</p>
             <img class="postimg" src="img/undraw_responsive_6c8s.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="postss">
+        <div class="posts postss">
             <p class="posttitle">Remote accountant at <br> Urumuri Ltd.</p>
             <img class="postimg" src="img/undraw_wallet_aym5.svg">
             <p class="type">Part-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="postss">
+        <div class="posts postss">
             <p class="posttitle">Jobs at Mass Design</p>
             <img class="postimg" src="img/undraw_QA_engineers_dg5p.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="postss">
+        <div class="posts postss">
             <p class="posttitle">Students Affair Manager<br>at ALU Rwanda</p>
             <img class="postimg" src="img/undraw_candidate_ubwv.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="postss">
+        <div class="posts postss">
             <p class="posttitle">Remote accountant at <br> H&B Holdings</p>
             <img class="postimg" src="img/undraw_working_late_pukg.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="postss">
+        <div class="posts postss">
             <p class="posttitle">Part-time jobs at<br> Kigalitoday</p>
             <img class="postimg" src="img/undraw_online_media_62jb.svg">
             <p class="type">Part-time</p>
             <p class="due">Deadline:6 Nov 2020</p>
-        </div> -->
-      </section>
+        </div>
 </div>
 <div id="Resources">
     <!-- filters all related to type of the job -->
