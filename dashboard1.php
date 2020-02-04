@@ -62,9 +62,46 @@ if (isset($_POST['update'])) {
     mysqli_query($dbconnect, $update6);
     header('location:dashboard1.php');
 }
+//profile picture stuufffs
+ //for profile pictures and stuff
+  $msg = "";
+  $msg_class = "";
+  if (isset($_POST['upload'])) {
+    // for the database
+    $profileImageName = time() . '-' . $_FILES["picture"]["name"];
+    // For image upload
+    $target_dir = "img/";
+    $target_file = $target_dir . basename($profileImageName);
+    // VALIDATION
+    // validate image size. Size is calculated in Bytes
+    if($_FILES['picture']['size'] > 200000) {
+      $msg = "Image size should not be greated than 200Kb";
+      $msg_class = "alert-danger1";
+    }
+    // check if file exists
+    if(file_exists($target_file)) {
+      $msg = "File already exists";
+      $msg_class = "alert-danger2";
+    }
+    // Upload image only if no errors
+    if (empty($error)) {
+      if(move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file)) {
+        $sql = "UPDATE studentusers SET profilepicture='$profileImageName' WHERE email='$email'";
+        if(mysqli_query($db, $sql)){
+          header('location:dashboard1.php');
+          $msg = "Image uploaded and saved in the Database";
+          $msg_class = "alert-success";
+        } else {
+          $msg = "There was an error in the database";
+          $msg_class = "alert-danger3";
+        }
+      } else {
+        $error = "There was an error uploading the file";
+        $msg = "alert-danger4";
+      }
+    }
+  }
 ?>
-  
-<!-- update php script -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -75,6 +112,7 @@ if (isset($_POST['update'])) {
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/main3.css">
     <script type="text/javascript" src="js/java.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  s
     <!-- For edit scrioopt -->
     <script>
         function edittoggle() {
@@ -115,7 +153,7 @@ if (isset($_POST['update'])) {
 <body>
 <header id="header">
     <img src="img/talent.png" class="logo">
-    <img src="img/prostudent.png" id="smallpp">
+    <img src="<?php echo 'img/' . $row['profilepicture'] ?>" id="smallpp">
     <a class="myaccount" name="logout" href="logout.php" style="text-decoration:none">logout</a>
   <section class="navigation">
     <!-- Vertical fixed navigation bar -->
@@ -134,11 +172,14 @@ if (isset($_POST['update'])) {
 <div id="aboutme">
 <div class="portfolio" style="position: fixed;">
    <div class ="container" >
- <img src="img/prostudent.png" class="profilepic">
+ <img src="<?php echo 'img/' . $row['profilepicture'] ?>" class="profilepic" id="profiledisplay" onclick="triggerclick()">
  <div class="text">
  <a href="#formtoupload" class="uploadpc" onclick="picturepic()">Upload<br>Picture</a> 
 </div>
-<input type="file" name="" id="formtoupload">
+<form method="post" enctype="multipart/form-data" id="formtoupload">
+    <input type="file" name="picture"  id="picture" onchange="displayImage(this)">
+    <input type="submit" name="upload" value="upload" id="upload">
+</form>
 </div>
     <p id="nameoftheperson">
      <?php echo $row['firstname']." ".$row['lastname'] ?>
@@ -258,3 +299,4 @@ if (isset($_POST['update'])) {
 </div>
 </body>
 </html>
+ 

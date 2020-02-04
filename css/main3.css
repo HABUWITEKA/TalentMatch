@@ -113,7 +113,7 @@ nav{
 .portfolio{
     background-color: lavenderblush;
     width: 300px;
-    height: 400px;
+    height: inherit;
     box-shadow: #C8E31C;
     left:390px;
     top:195px;
@@ -302,14 +302,6 @@ nav{
     position: relative;
   }
 
-  /*fpr profile picture*/
-
-  .container{
-
-  }
-
-
-
   #applications{
     display: none;
   }
@@ -331,8 +323,15 @@ nav{
   #formtoupload{
     /*display: none;*/
     width: 300px;
-    height: 100px;
-    background-color: red;
+    height: 60px;
+    background-color: #C8E31C;
     transform: scale(1,1);
     display: none;
+    top:10px;
+    position: relative;
+  }
+  #upload{
+    left:110px;
+    top:10px;
+    position: relative;
   }
