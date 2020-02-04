@@ -58,6 +58,7 @@ body{
 .icon{
     width: 20px;
     height: 20px;
+    display: none;
 }
 nav{
     flex-direction: column;

@@ -111,6 +111,7 @@ if (isset($_POST['update'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/main3.css">
+    <link rel="stylesheet" href="css/main4.css">
     <script type="text/javascript" src="js/java.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  s
     <!-- For edit scrioopt -->
@@ -158,7 +159,7 @@ if (isset($_POST['update'])) {
   <section class="navigation">
     <!-- Vertical fixed navigation bar -->
     <nav>
-        <a href="#" class="links active" onclick="displayaboutme()"><img class="icon" src="img/business.png">&nbspAbout Me</a>
+        <a href="#" class="links active" onclick="displayaboutme()"><img class="icon" src="img/propo.svg">&nbspAbout Me</a>
         <a href="#" class="links" onclick="displayapplications()"><img class="icon" src="img/business.png">&nbspApplications</a>
         <a href="#" class="links" onclick="displayjobs()"><img class="icon" src="img/business.png">&nbspJobs</a>
         <a href="#" class="links" onclick="displayinternships()"><img class="icon" src="img/business.png">&nbspInternships</a>
@@ -283,19 +284,222 @@ if (isset($_POST['update'])) {
 <!-- Application corner and own applications at a glance -->
 <div id="applications">
     <!-- filters all related to type of the job -->
-    <h1 style="top:200px;position: absolute;">Applications corner</h1>
+    <!-- <h1 style="top:200px;position: absolute;">Applications corner</h1> -->
+    <table>
+  <thead>
+    <tr>
+      <th scope="col">Company</th>
+      <th scope="col">Job Name</th>
+      <th scope="col">Job Type</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Company">Kigali Today</td>
+      <td data-label="Job Name">Communication Specialist</td>
+      <td data-label="Job Type">Full-Time</td>
+      <td data-label="Status">Pending</td>
+    </tr>
+
+    <tr>
+      <td data-label="Company">Kigali Today</td>
+      <td data-label="Job Name">Communication Specialist</td>
+      <td data-label="Job Type">Full-Time</td>
+      <td data-label="Status">Pending</td>
+    </tr>
+
+    <tr>
+      <td data-label="Company">Kigali Today</td>
+      <td data-label="Job Name">Communication Specialist</td>
+      <td data-label="Job Type">Full-Time</td>
+      <td data-label="Status">Pending</td>
+    </tr>
+
+    <tr>
+      <td data-label="Company">Kigali Today</td>
+      <td data-label="Job Name">Communication Specialist</td>
+      <td data-label="Job Type">Full-Time</td>
+      <td data-label="Status">Pending</td>
+    </tr>
+    
+  </tbody>
+</table>
 </div>
-<div id="jobs">
+<div id="jobs" class="jobscorner">
     <!-- filters all related to type of the job -->
-    <h1 style="top:200px;position: absolute;">Jobs corner</h1>
+    <!-- <h1 style="top:200px;position: absolute;">Jobs corner</h1> -->
+    <div id="myBtnContainer">
+        <button class="filterr activee" onclick="filterSelection('All')">All</button>
+        <button class=" filterr"  onclick="filterSelection('Part-time')">Part-time</button>
+        <button class=" filterr"   onclick="filterSelection('Full-time')">Full-time</button>
+      </div>
+
+      <section class="opcorner">
+        <div class="posts Full-time">
+            <p class="posttitle">Front End developer at<br>  TalentMatch</p>
+            <img class="postimg" src="img/undraw_responsive_6c8s.svg">
+            <p class="type">Full-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="posts Part-time">
+            <p class="posttitle">Remote accountant at <br> Urumuri Ltd.</p>
+            <img class="postimg" src="img/undraw_wallet_aym5.svg">
+            <p class="type">Part-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="posts Full-time">
+            <p class="posttitle">Jobs at Mass Design</p>
+            <img class="postimg" src="img/undraw_QA_engineers_dg5p.svg">
+            <p class="type">Full-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="posts Full-time">
+            <p class="posttitle">Students Affair Manager<br>at ALU Rwanda</p>
+            <img class="postimg" src="img/undraw_candidate_ubwv.svg">
+            <p class="type">Full-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="posts Full-time">
+            <p class="posttitle">Remote accountant at <br> H&B Holdings</p>
+            <img class="postimg" src="img/undraw_working_late_pukg.svg">
+            <p class="type">Full-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="posts Part-time">
+            <p class="posttitle">Part-time jobs at<br> Kigalitoday</p>
+            <img class="postimg" src="img/undraw_online_media_62jb.svg">
+            <p class="type">Part-time</p>
+            <p class="due">Deadline:6 Nov 2020</p>
+        </div>
+        
+      </section>
+      <script>
+        filterSelection("All")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("posts");
+          if (c == "All") c = "";
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("filterr");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("activee");
+            current[0].className = current[0].className.replace(" activee", "");
+            this.className += " activee";
+          });
+        }
+        </script>
 </div>
 <div id="Internships">
     <!-- filters all related to type of the job -->
-    <h1 style="top:200px;position: absolute;">Internship corner</h1>
+    <!-- <h1 style="top:200px;position: absolute;">Internship corner</h1> -->
+    <section class="opcornerr">
+        <div class="postss">
+            <p class="posttitle">Front End developer at<br>  TalentMatch</p>
+            <img class="postimg" src="img/undraw_responsive_6c8s.svg">
+            <p class="type">Full-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="postss">
+            <p class="posttitle">Remote accountant at <br> Urumuri Ltd.</p>
+            <img class="postimg" src="img/undraw_wallet_aym5.svg">
+            <p class="type">Part-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="postss">
+            <p class="posttitle">Jobs at Mass Design</p>
+            <img class="postimg" src="img/undraw_QA_engineers_dg5p.svg">
+            <p class="type">Full-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="postss">
+            <p class="posttitle">Students Affair Manager<br>at ALU Rwanda</p>
+            <img class="postimg" src="img/undraw_candidate_ubwv.svg">
+            <p class="type">Full-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="postss">
+            <p class="posttitle">Remote accountant at <br> H&B Holdings</p>
+            <img class="postimg" src="img/undraw_working_late_pukg.svg">
+            <p class="type">Full-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="postss">
+            <p class="posttitle">Part-time jobs at<br> Kigalitoday</p>
+            <img class="postimg" src="img/undraw_online_media_62jb.svg">
+            <p class="type">Part-time</p>
+            <p class="due">Deadline:6 Nov 2020</p>
+        </div> -->
+      </section>
 </div>
 <div id="Resources">
     <!-- filters all related to type of the job -->
-    <h1 style="top:200px;position: absolute;">Resources corner</h1>
+   
+    <div class="box">
+      <p class="coursename">Course 1</p>
+      <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
+        How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
+        <button class="btnw">Enroll</button>
+    </div>
+    <div class="box">
+    <p class="coursename">Course 1</p>
+      <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
+        How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
+        <button class="btnw">Enroll</button>
+    </div>
+    <div class="box">
+    <p class="coursename">Course 1</p>
+      <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
+        How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
+        <button class="btnw">Enroll</button>
+    </div>
+    <div class="box">
+    <p class="coursename">Course 1</p>
+      <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
+        How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
+        <button class="btnw">Enroll</button>
+    </div>
+    <div class="box">
+    <p class="coursename">Course 1</p>
+      <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
+        How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
+        <button class="btnw">Enroll</button>
+    </div>
+    <div class="box">
+    <p class="coursename">Course 1</p>
+      <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
+        How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
+        <button class="btnw">Enroll</button>
+    </div>
 </div>
 </body>
 </html>

@@ -1,0 +1,242 @@
+/*body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}*/
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 75%;
+  table-layout: fixed;
+  margin-left: 323px;
+  margin-top: 250px;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background-color: #C8E31C
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+
+  }
+  
+}
+table td[data-label=Status]{
+  background-color: orange;
+  opacity: .3;
+}
+
+/*For the filtering*/
+
+#myBtnContainer{
+  top:500px;
+  margin-left: 460px;
+  position: relative;
+  /* transform: scale(.8,.8); */
+}
+.filterr{
+  background-color: transparent;
+  color: white;
+  font-family: Microsoft YaHei UI;
+  font-weight: bold;
+  font-size: 25px;
+  border:none;
+  width: 200px;
+  height: 50px;
+}
+.filterr.activee{
+  background-color: #C8E31C;
+}
+.posts{
+  width: 320px;
+  height: 300px;
+  background-color: #808080;
+  margin-left: 50px;
+  margin-top: 50px;
+  top:530px;
+  position: relative;
+   float: left;
+   display: none;
+   border-radius: 5px;
+   left:200px;
+   position: relative;
+  
+}
+.opcornerr{
+  transform: scale(.7,.7);
+  top:-300px;
+  margin-left:110px;
+  position: absolute;
+}
+.postss{
+  width: 320px;
+  height: 300px;
+  background-color: #808080;
+  margin-left: 50px;
+  margin-top: 50px;
+  top:530px;
+  position: relative;
+   float: left;
+   overflow: visible;
+   border-radius: 5px;
+   left:200px;
+   position: relative;
+  
+}
+.posts{
+  overflow: hidden;
+}
+.postss{
+  display: block;
+}
+.posts :hover{
+   cursor: grab;
+}
+.show{
+  display: block;
+}
+.postimg{
+  width: inherit;
+  height: 150px;
+  top:0px;
+  position: absolute;
+}
+.posttitle{
+  width:max-content;
+  color: #1CC8E3;
+  font-family: Microsoft YaHei UI;
+  font-size: 25px;
+  left: 5px;
+  top: 140px;
+  position: relative;
+}
+
+.type{
+  color: black;
+  font-size: 10px;
+  font-family: Microsoft YaHei UI ;
+  left:10px;
+  top:265px;
+  position: absolute;
+}
+.due{
+   color: black;
+   font-size: 10px;
+   font-family: Microsoft YaHei UI;
+   right: 10px;
+   top:265px;
+   position: absolute;
+}
+.jobscorner{
+  transform: scale(.7,.7);
+  margin-left: 100px;
+  top:-300px;
+  position: absolute;
+}
+#Resources{
+   transform: scale(.95,.95);
+   margin-left: 240px;
+   margin-top: 190px;;
+   left:20px;
+   position: relative;
+}
+.box {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: 260px;
+  margin: 1rem;
+  position: relative;
+  width: 300px;
+ margin-left: 50px;
+}
+.coursename{
+  font-weight: bold;
+  font-family: Microsoft Yahei UI;
+  padding-left: 25px;
+}
+.coursedesc{
+  font-family: Microsoft Yahei UI;
+  font-size: 13px;
+  text-align: justify;
+  width: initial;
+  padding-left: 25px;
+  margin-right: 25px;
+}
+.btnw{
+	background-color: #1CC8E3 ;
+	color: rgb(247, 247, 247);
+	font-family: Microsoft YaHei UI;
+	font-size: 20px;
+  border:none;
+  top: 225px;
+  left:25px;
+  position: absolute;
+}
