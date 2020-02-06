@@ -262,15 +262,15 @@ nav{
   }
 
 #editarea{
-      top:149px;
+      top:100px;
       left:780px;
       width:540px;
       position:absolute;
       /*background-color: lightcoral;*/
-      display: none;
+       display: none; 
   }
   #editarea2{
-    top:464px;
+    top:404px;
     left:780px;
     position: absolute;
     /*background-color: lightcoral;*/
@@ -292,7 +292,7 @@ nav{
   }
   #savebutton{
     left:0px;
-    top:-57px;
+    top:0px;
     position: absolute;
   }
 
