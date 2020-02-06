@@ -11,7 +11,7 @@ header{
     z-index: 100;
 }
 body{
-    background-color: red;
+    background-color: #1CC8E3;
     margin: 0px;
 }
 .logo{
@@ -262,14 +262,14 @@ nav{
   }
 
 #editarea{
-      top:190px;
+      top:167px;
       left:780px;
       width:540px;
       position:absolute;
       display: none;
   }
 #editarea2{
-    top:404px;
+    top:482px;
     left:780px;
     position: absolute;
     /*background-color: lightcoral;*/
@@ -281,7 +281,7 @@ nav{
     position: absolute;
   }
 #editarea3{
-    top:779px;
+    top:797px;
     left:780px;
     position: absolute;
 /*background-color: lightcoral;*/
@@ -296,7 +296,7 @@ nav{
   }
 #savebutton{
     left:0px;
-    top:0px;
+    top:-57px;
     position: absolute;
   }
 

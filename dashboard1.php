@@ -225,7 +225,7 @@ if (isset($_POST['update'])) {
     </p>
 </div>
 <!-- EDIT BIOGRAPHY -->
-<div id="editarea" style="top:167px;position: absolute;">
+<div id="editarea">
      <form method="post" action="dashboard1.php">
          <textarea name="editedbio" id="editedbio" cols="30" rows="10"><?php echo $row['Aboutme'] ?></textarea>
          <input type="submit" name="Save" id="savebutton" class="btn edit " value="Save" onclick="edittoggle()">
@@ -242,7 +242,7 @@ if (isset($_POST['update'])) {
             ?>
     </p>
 </div>
-<div id="editarea2" style="top:482px;position: absolute;">
+<div id="editarea2">
      <form method="post" action="dashboard1.php">
          <textarea name="editedskills" id="editedbio" cols="30" rows="10"><?php echo $row['Skills'] ?></textarea>
          <input type="submit" name="Save2" id="savebutton" class="btn edit " value="Save" onclick="edittoggle2()">
@@ -260,7 +260,7 @@ if (isset($_POST['update'])) {
             ?>
     </p>
 </div>
-<div id="editarea3" style="top:797px;position: absolute;">
+<div id="editarea3">
      <form method="post" action="dashboard1.php">
          <textarea name="editedinterests" id="editedbio" cols="30" rows="10"><?php echo $row['Interests'] ?></textarea>
          <input type="submit" name="Save3" id="savebutton" class="btn edit " value="Save" onclick="edittoggle3()">
