@@ -11,7 +11,7 @@ header{
     z-index: 100;
 }
 body{
-    background-color: #1CC8E3;
+    background-color: red;
     margin: 0px;
 }
 .logo{
@@ -262,41 +262,45 @@ nav{
   }
 
 #editarea{
-      top:100px;
+      top:190px;
       left:780px;
       width:540px;
       position:absolute;
-      /*background-color: lightcoral;*/
-       display: none; 
+      display: none;
   }
-  #editarea2{
+#editarea2{
     top:404px;
     left:780px;
     position: absolute;
     /*background-color: lightcoral;*/
     display: none;
   }
-  #editarea3{
+
+#frm{
+    top:200px;
+    position: absolute;
+  }
+#editarea3{
     top:779px;
     left:780px;
     position: absolute;
 /*background-color: lightcoral;*/
     display: none;
   }
-  #editedbio{
+#editedbio{
     width:545px;
     height: 250px;
     resize: none;
     font-family: Microsoft YaHei UI;
     animation-delay: .3;
   }
-  #savebutton{
+#savebutton{
     left:0px;
     top:0px;
     position: absolute;
   }
 
-  .updateform{
+.updateform{
     left:440px;
     top: 240px;
     position: absolute;
@@ -306,7 +310,7 @@ nav{
     box-shadow: 5px 10px 18px #888888;
     transform: scale(1.5,1.5);
   }
-  #updateform{
+#updateform{
     display: none;
   }
   label{
