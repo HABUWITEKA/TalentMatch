@@ -179,6 +179,7 @@ table td[data-label=Status]{
    position: absolute;
 }
 .jobscorner{
+  background-color: #C8E31C;
   margin-left: 100px;
   top:-300px;
   position: absolute;
