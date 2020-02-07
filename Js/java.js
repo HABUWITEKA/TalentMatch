@@ -195,5 +195,3 @@ function displayImage(e) {
     reader.readAsDataURL(e.files[0]);
   }
 }
-
-///kkd

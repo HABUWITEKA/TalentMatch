@@ -1,40 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-#myDIV {
-  width: 100%;
-  padding: 50px 0;
-  text-align: center;
-  background-color: lightblue;
-  margin-top: 20px;
-}
-</style>
-</head>
 <body>
 
-<p>Click the "Try it" button to toggle between hiding and showing the DIV element:</p>
+<p>Select a new car from the list.</p>
 
-<button onclick="myFunction()">Try it</button>
+<select id="mySelect" onchange="myFunction()">
+  <option value="Audi">Audi
+  <option value="BMW">BMW
+  <option value="Mercedes">Mercedes
+  <option value="Volvo">Volvo
+</select>
 
-<div id="myDIV">
-This is my DIV element.
-</div>
+<p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
 
-<p><b>Note:</b> The element will not take up any space when the display property set to "none".</p>
+<p id="demo"></p>
 
 <script>
 function myFunction() {
-  var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+  var x = document.getElementById("mySelect").value;
+  document.getElementById("demo").innerHTML = "You selected: " + x;
+  document.getElementById('demo').style.color="red";
 }
 </script>
 
 </body>
 </html>
-

@@ -110,8 +110,8 @@ if (isset($_POST['update'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $row['firstname']."'s". " "."Dashboard";  ?></title>
-    <link rel="stylesheet" href="css/main3.css">
-    <link rel="stylesheet" href="css/main4.css">
+    <link rel="stylesheet" type="text/css" href="css/main3.css">
+    <link rel="stylesheet" type="text/css" href="css/newcss/css.css">
     <script type="text/javascript" src="js/java.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  s
     <!-- For edit scrioopt -->
@@ -331,58 +331,124 @@ if (isset($_POST['update'])) {
   </tbody>
 </table>
 </div>
+<!-- jobssssssss -->
 <div id="jobs" class="jobscorner">
     <!-- filters all related to type of the job -->
     <!-- <h1 style="top:200px;position: absolute;">Jobs corner</h1> -->
     <div id="myBtnContainer">
         <button class="filterr activee" onclick="filterSelection('All')">All</button>
-        <button class=" filterr"  onclick="filterSelection('Part-time')">Part-time</button>
-        <button class=" filterr"   onclick="filterSelection('Full-time')">Full-time</button>
+
+        <select class="filterr" id="industry" onchange="show_selected()">
+           <option value="">Filter by industry</option>
+           <option value="Technology">Technology</option>
+           <option value="Education">Education</option>
+           <option value="Finance">Finance</option>
+           <option value="Auditing">Auditing</option>
+        </select>
+        <!-- <button id="btn">Filter</button> -->
       </div>
 
       <section class="opcorner">
-        <div class="posts Full-time">
-            <p class="posttitle">Front End developer at<br>  TalentMatch</p>
+        <div class="posts" id="Technology" >
+            <p class="posttitle" id="Technology">Front End developer at<br>  TalentMatch</p>
             <img class="postimg" src="img/undraw_responsive_6c8s.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts Part-time">
+        <div class="posts Part-time" id="Finance">
             <p class="posttitle">Remote accountant at <br> Urumuri Ltd.</p>
             <img class="postimg" src="img/undraw_wallet_aym5.svg">
             <p class="type">Part-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts Full-time">
+        <div class="posts" id="Auditing">
             <p class="posttitle">Jobs at Mass Design</p>
             <img class="postimg" src="img/undraw_QA_engineers_dg5p.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts Full-time">
-            <p class="posttitle">Students Affair Manager<br>at ALU Rwanda</p>
+        <div class="posts Full-time" id="Education">
+            <p class="posttitle Technology">Students Affair Manager<br>at ALU Rwanda</p>
             <img class="postimg" src="img/undraw_candidate_ubwv.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts Full-time">
+        <div class="posts Full-time" id="Finance">
             <p class="posttitle">Remote accountant at <br> H&B Holdings</p>
             <img class="postimg" src="img/undraw_working_late_pukg.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts Part-time">
+        <div class="posts Part-time" id="Finance">
             <p class="posttitle">Part-time jobs at<br> Kigalitoday</p>
             <img class="postimg" src="img/undraw_online_media_62jb.svg">
             <p class="type">Part-time</p>
             <p class="due">Deadline:6 Nov 2020</p>
         </div>
+        <div class="posts Full-time" id="Technology">
+            <p class="posttitle">Front End developer at<br>  TalentMatch</p>
+            <img class="postimg" src="img/undraw_responsive_6c8s.svg">
+            <p class="type">Full-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="posts Part-time" id="Finance">
+            <p class="posttitle">Remote accountant at <br> Urumuri Ltd.</p>
+            <img class="postimg" src="img/undraw_wallet_aym5.svg">
+            <p class="type">Part-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="posts Full-time" id="Auditing">
+            <p class="posttitle">Jobs at Mass Design</p>
+            <img class="postimg" src="img/undraw_QA_engineers_dg5p.svg">
+            <p class="type">Full-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
+        <div class="posts Full-time" id="Education">
+            <p class="posttitle">Students Affair Manager<br>at ALU Rwanda</p>
+            <img class="postimg" src="img/undraw_candidate_ubwv.svg">
+            <p class="type">Full-time</p>
+            <p class="due">Deadline:29 Jan 2020</p>
+        </div>
         
       </section>
       <script>
+        function show_selected() {
+    var selector = document.getElementById('industry').value;
+    var x = document.getElementById('Technology');
+    var y = document.getElementById('Finance');
+    var z = document.getElementById('Education');
+    var t = document.getElementById('Auditing');
+    if (selector=="Technology") {
+      // y.style.display ="none";
+      // z.style.display = "none";
+      // t.style,display = "none";
+      console.log("dudue");
+    }
+    // if (selector=="Education") {
+    //   y.style.display ="none";
+    //   x.style.display = "none";
+    //   t.style,display = "none";
+    //   console.log("Education");
+    // }
+    // if (selector=="Auditing") {
+    //   y.style.display ="none";
+    //   z.style.display = "none";
+    //   x.style,display = "none";
+    // }
+    // else{
+    //   x.style.display ="none";
+    //   z.style.display="none";
+    //   t.style.display="none";
+    // }
+    
+}
+      </script>
+      <script>
         filterSelection("All")
+       
         function filterSelection(c) {
           var x, i;
+          
           x = document.getElementsByClassName("posts");
           if (c == "All") c = "";
           for (i = 0; i < x.length; i++) {
@@ -422,8 +488,23 @@ if (isset($_POST['update'])) {
             this.className += " activee";
           });
         }
+        function show_selected() {
+    var selector = document.getElementById('industry');
+    var value = selector[selector.selectedIndex].value;
+    var x = document.getElementById('Technology');
+    var y = document.getElementById('')
+    if (value=="Technology") {
+      x.style.display="";
+    }
+    else{
+      console.log("nothing");
+    }
+}
+document.getElementById('btn').addEventListener('click', show_selected);
         </script>
 </div>
+
+  
 <div id="Internships" class="intern">
     <div class="posts postss">
             <p class="posttitle">Front End developer at<br>  TalentMatch</p>

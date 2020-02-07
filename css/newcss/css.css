@@ -1,0 +1,141 @@
+#myBtnContainer{
+  top:350px;
+  margin-left: 460px;
+  position:relative;
+  /* transform: scale(.8,.8); */
+}
+.filterr{
+  background-color: transparent;
+  color: white;
+  font-family: Microsoft YaHei UI;
+  font-weight: bold;
+  font-size: 25px;
+  border:none;
+  width: 200px;
+  height: 50px;
+}
+.filterr.activee{
+  background-color: #C8E31C;
+}
+.posts{
+  width: 320px;
+  height: 300px;
+  background-color: #808080;
+  margin-left: 15px;
+  margin-top: 50px;
+  top:350px;
+  position: relative;
+  float: left;
+  display: none;
+  border-radius: 5px;
+  left:285px;
+  position: relative;
+  /*display: none;*/
+  padding-left: 20px;
+  
+}
+
+
+.posts{
+  /*overflow: hidden;*/
+}
+
+.posts :hover{
+   cursor: grab;
+}
+.show{
+  display: block;
+}
+.postimg{
+  width: inherit;
+  height: 150px;
+  top:0px;
+  position: absolute;
+}
+.posttitle{
+  width:max-content;
+  color: #1CC8E3;
+  font-family: Microsoft YaHei UI;
+  font-size: 25px;
+  left: 5px;
+  top: 140px;
+  position: relative;
+}
+
+.type{
+  color: black;
+  font-size: 10px;
+  font-family: Microsoft YaHei UI ;
+  left:10px;
+  top:265px;
+  position: absolute;
+}
+.due{
+   color: black;
+   font-size: 10px;
+   font-family: Microsoft YaHei UI;
+   right: 10px;
+   top:265px;
+   position: absolute;
+}
+.jobscorner{
+  margin-left: -180px;
+  top:-300px;
+  left:100px;
+  position: absolute;
+  transform: scale(.67,.67);
+}
+#Resources{
+   transform: scale(.95,.95);
+   margin-left: 240px;
+   margin-top: 190px;;
+   left:20px;
+   position: relative;
+}
+.box {
+  background: #808080;
+  border-radius: 2px;
+  display: inline-block;
+  height: 260px;
+  margin: 1rem;
+  position: relative;
+  width: 300px;
+  margin-left: 50px;
+}
+.coursename{
+  font-weight: bold;
+  font-family: Microsoft Yahei UI;
+  padding-left: 25px;
+  color: #C8E31C;
+}
+.coursedesc{
+  font-family: Microsoft Yahei UI;
+  font-size: 13px;
+  text-align: justify;
+  width: initial;
+  padding-left: 25px;
+  margin-right: 25px;
+}
+.btnw{
+  background-color: #1CC8E3 ;
+  color: rgb(247, 247, 247);
+  font-family: Microsoft YaHei UI;
+  font-size: 20px;
+  border:none;
+  top: 225px;
+  left:25px;
+  position: absolute;
+}
+#Technology{
+  display: ;
+}
+#Auditing{
+  display: ;
+}
+
+#Education{
+  display: ;
+}
+#Finance{
+  display: ;
+}
