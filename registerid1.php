@@ -75,7 +75,7 @@
   </label>
   <div id="file-upload-filename" onload="document.innerHTML(fileName)"></div><br><br> -->
   <input name="submit" type="submit">
-  <p id="alt" style="top:850px;position:absolute;left:460px;">I have been here before,<a href="loginid1.php">login</a></p>
+  <p id="alt" style="top:800px;position:absolute;left:460px;">I have been here before,<a href="loginid1.php">login</a></p>
   <div id="copyrightss" class="posts" style="top:50px;position:relative;left:85px;" >
     <p id="copy">Copyrights <a target="_blank" href="http://talentmatch.rw/">TalentMatch.inc</a></p>
 </div>

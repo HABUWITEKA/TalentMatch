@@ -53,8 +53,10 @@
   </label>
   <div id="file-upload-filename" onload="document.innerHTML(fileName)"></div><br><br><br>
   <input type="submit" class="submit2" name="submitcompany">
+    <p id="alt" style="top: 20px;left:-220px;position: relative;">I have been here before,<a href="loginid2.php">login</a></p>
+
 </form>
-<div id="copyrightss" class="posts" style="display: block; left: -300px;position:absolute" >
+<div id="copyrightss" class="posts" style="display: block; left: -300px;position:relative;top:10px;" >
     <p id="copy">Copyrights <a target="_blank" href="http://talentmatch.rw/">TalentMatch.inc</a></p>
 </div>
     </body>
