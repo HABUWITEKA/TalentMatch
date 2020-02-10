@@ -77,7 +77,7 @@ if (isset($_POST['update'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $row['companyname']."'s". " "."Dashboard";  ?></title>
     <link rel="stylesheet" href="css/main3.css">
-    <link rel="stylesheet" href="css/main4.css">
+    <link rel="stylesheet" type="text/css" href="css/newcss/another.css">
     <script type="text/javascript" src="js/java.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
 	<title></title>
@@ -162,7 +162,32 @@ if (isset($_POST['update'])) {
 </form>
 </header> 
 <div id="jobs">
-    <h1>Post a job</h1>
+    <!-- <h1 style="left:300px;position: absolute;top:300px;">Post a job</h1> -->
+    <div id="postjob">
+        <div id="postbanner">
+            <p style="top:-15px;position:relative;">Post it here!</p>
+        </div>
+
+        <!--  -->
+        <form>
+            <label>Job Title</label>
+            <input type="text" name="jobtitle" id="jobtitle" placeholder="Job title">
+            <label id="entrylevellabel">Entry Level</label>
+            <select id="entrylevel">
+                <option>Job's Entry Level:</option>
+                <option>Basic</option>
+                <option>Middle</option>
+                <option>High</option>
+            </select>
+            <label id="jobindustrylabel">Job's Industry</label>
+            <input type="text" name="jobindutsry" id="jobindustry" placeholder="Job Industry">
+            <label id="jobdescriptionlabel">Job description</label>
+            <textarea id="jobdescription" placeholder="Job Description"></textarea>
+            <p id="alternative">Or, choose to upload Pdf of job description</p>
+            <input type="file" name="pdfdescription" value="Upload Pdf">
+            <input type="submit" name="submitjob" value="Post The job">
+        </form>
+    </div>
 </div>
 </body>
 </html>
