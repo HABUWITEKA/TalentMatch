@@ -79,4 +79,16 @@ if (isset($_POST['logincompany'])) {
     }
   }
 }
+// add a posting to a database
+if (isset($_POST['submitjob'])) {
+  # code...
+  $jobtitle = mysqli_real_escape_string($db, $_POST['jobtitle']);
+  $jobentrylevel = mysqli_real_escape_string($db, $_POST['jobentrylevel']);
+  $jobindustry = mysqli_real_escape_string($db, $_POST['jobindutsry']);
+  $jobdescription = mysqli_real_escape_string($db, $_POST['jobdescription']);
+  $jobdescriptionpdf = mysqli_real_escape_string($db, $_POST['pdfdescription']);
+  //adding to database
+  $adding = "INSERT INTO jobsposting(Jobtitle, Jobentrylevel, Jobindutsry, Job description, Jobdescriptionpdf )VALUES('$jobtitle','$jobentrylevel','$jobindutsry', '$jobdescription', '$jobdescriptionpdf')";
+  mysql_query($db, $adding);
+}
   ?>
