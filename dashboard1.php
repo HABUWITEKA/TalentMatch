@@ -509,42 +509,44 @@ document.getElementById('btn').addEventListener('click', show_selected);
 
   
 <div id="Internships" class="intern">
-    <div class="posts postss">
+  <div class="postss">
+    <div class="posts">
             <p class="posttitle"><?php echo $row2['Jobtitle'] ?></p>
             <img class="postimg" src="img/undraw_responsive_6c8s.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts postss">
+        <div class="posts">
             <p class="posttitle">Remote accountant at <br> Urumuri Ltd.</p>
             <img class="postimg" src="img/undraw_wallet_aym5.svg">
             <p class="type">Part-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts postss">
+        <div class="posts">
             <p class="posttitle">Jobs at Mass Design</p>
             <img class="postimg" src="img/undraw_QA_engineers_dg5p.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts postss">
+        <div class="posts">
             <p class="posttitle">Students Affair Manager<br>at ALU Rwanda</p>
             <img class="postimg" src="img/undraw_candidate_ubwv.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts postss">
+        <div class="posts">
             <p class="posttitle">Remote accountant at <br> H&B Holdings</p>
             <img class="postimg" src="img/undraw_working_late_pukg.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts postss">
+        <div class="posts">
             <p class="posttitle">Part-time jobs at<br> Kigalitoday</p>
             <img class="postimg" src="img/undraw_online_media_62jb.svg">
             <p class="type">Part-time</p>
             <p class="due">Deadline:6 Nov 2020</p>
         </div>
+   </div>    
 </div>
 <div id="Resources">
     <!-- filters all related to type of the job -->
@@ -553,37 +555,50 @@ document.getElementById('btn').addEventListener('click', show_selected);
       <p class="coursename">Course 1</p>
       <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
         How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
-        <button class="btnw">Enroll</button>
+        <button class="btnw">Basic</button>
+        <button class="btnw btnw2">Middle</button>
+        <button class="btnw btnw3">High</button>
     </div>
     <div class="box">
     <p class="coursename">Course 1</p>
       <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
         How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
-        <button class="btnw">Enroll</button>
+        <button class="btnw">Basic</button>
+        <button class="btnw btnw2">Middle</button>
+        <button class="btnw btnw3">High</button>
     </div>
     <div class="box">
     <p class="coursename">Course 1</p>
       <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
         How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
-        <button class="btnw">Enroll</button>
+        <button class="btnw">Basic</button>
+        <button class="btnw btnw2">Middle</button>
+        <button class="btnw btnw3">High</button>
     </div>
     <div class="box">
     <p class="coursename">Course 1</p>
       <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
         How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
-        <button class="btnw">Enroll</button>
+        <button class="btnw">Basic</button>
+        <button class="btnw btnw2">Middle</button>
+        <button class="btnw btnw3">High</button>
     </div>
     <div class="box">
     <p class="coursename">Course 1</p>
       <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
         How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
-        <button class="btnw">Enroll</button>
+        
+        <button class="btnw">Basic</button>
+        <button class="btnw btnw2">Middle</button>
+        <button class="btnw btnw3">High</button>
     </div>
     <div class="box">
     <p class="coursename">Course 1</p>
       <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
         How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
-        <button class="btnw">Enroll</button>
+        <button class="btnw">Basic</button>
+        <button class="btnw btnw2">Middle</button>
+        <button class="btnw btnw3">High</button>
     </div>
 </div>
 <div id="events">

@@ -26,7 +26,7 @@
   top:350px;
   position: relative;
   float: left;
-  display: none;
+  /* display: none; */
   border-radius: 5px;
   left:285px;
   position: relative;
@@ -42,6 +42,13 @@
 
 .posts :hover{
    cursor: grab;
+}
+.postss{
+  margin-left: -180px;
+  top:-200px;
+  left:100px;
+  position: absolute;
+  transform: scale(.67,.67);
 }
 .show{
   display: block;
@@ -120,11 +127,19 @@
   background-color: #1CC8E3 ;
   color: rgb(247, 247, 247);
   font-family: Microsoft YaHei UI;
-  font-size: 20px;
+  font-size: 15px;
   border:none;
   top: 225px;
-  left:25px;
+  left:45px;
   position: absolute;
+  float: left;
+  border-spacing: 200px;
+}
+.btnw2{
+  margin-left:80px;
+}
+.btnw3{
+  margin-left:170px;
 }
 #Technology{
   display: block ;
