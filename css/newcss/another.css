@@ -49,7 +49,7 @@ input[type=text], select{
 	left:70px;
 	position: relative;
 }
-#entrylevel{
+#jobentrylevel{
 	border-width: 3px;
 	top:150px;
 	left:30px;
@@ -99,7 +99,8 @@ textarea{
 
 }
 ::placeholder{
-	font-size: 13px;}
+	font-size: 13px;
+}
 #jobdescriptionlabel{
 	top: 210px;
 	position: absolute;
@@ -114,13 +115,13 @@ textarea{
 	position: absolute;
 }
 input[type=file]{
-	width: 250px;
+	width: 220px;
 	height: 20px;
 	background-color: transparent;
 	border-radius: 4px;
 	border-color: orange;
 	border-style: solid;
-	top:380px;
+	top:405px;
 	left:170px;
 	position: relative;
 }
@@ -135,4 +136,104 @@ input[type=submit]{
     font-family: Microsoft Yahei UI;
     font-size: 20px;
     color: white;
+}
+
+.label{
+	left:0px;
+	position: relative;
+	font-size: 13px;
+}
+.updatebtn{
+	/* background-color: white; */
+	background:white;
+	color:black;
+	left:-20px;
+	position: relative;
+}
+.cancel{
+	left:150px;
+	position: relative;
+}
+#mybtns{
+	left:-20px;
+	position: relative;
+}
+.activejobs{
+	top:-470px;
+	position: relative;
+	height: fit-content;
+	text-align: left;
+	margin-top: 70px;
+}
+.statistics{
+	top:-10px;
+	position: relative;
+	
+}
+.edit{
+	top:-18px;
+	position: absolute;
+}
+.deadjobs{
+	background-color: darkgrey;
+}
+.updateform{
+transform: scale(1,1);
+z-index: 100;
+margin-top: 40px;
+margin-left: -65px;
+}
+.portfolio{
+	height: fit-content;
+}
+.postbtn{
+	background-color:orange;
+	text-align: center;
+	top:18px;
+	left: 320px;
+	position: fixed;
+	border: none;
+	color: white;
+	font-family: Microsoft Yahei UI;
+	font-size: 40px;
+	width: 700px;
+	z-index: 200;
+}
+.closeimage{
+	width: 30px;
+	height: 30px;
+	top:-15px;
+	left:578px;
+	position: absolute;
+}
+#postjob{
+	display: none;
+	/* z-index: 300; */
+}
+#jobbdead{
+	left: -110px;
+	position: absolute;}
+
+#deadlinelabel{
+	left:370px;
+	top:10px;
+	position: relative;
+}
+#Deadline{
+	left:370px;
+	top:75px;
+	position: absolute;;
+	width: 200px;
+	height: 35px;
+	background-color: transparent;
+	border-radius: 4px;
+	border-color: orange;
+	border-style: solid;
+}	
+#jobtitle{
+	width:180px;
+}
+#jobtitlelabel{
+	left: 148px;
+	position: relative;
 }

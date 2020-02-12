@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Welcome To TalentMatch</title>
-	<link rel="stylesheet" type="text/css" href="css/intro.css">
+	<link rel="stylesheet" href="css/intro.css">
 </head>
 <body>
 	<div id="box-container">

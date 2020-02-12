@@ -5,7 +5,7 @@ session_start();
 $db = mysqli_connect('localhost', 'HABUWITEKA', '17170', 'talentmatch');
 
 if (isset($_POST['submitcompany'])) {
-	# code...
+// 	# code...
 	$companyname=mysqli_real_escape_string($db,$_POST['companyname']);
 	$location = mysqli_real_escape_string($db, $_POST['location']);
 	$email = mysqli_real_escape_string($db, $_POST['email']);
@@ -80,15 +80,18 @@ if (isset($_POST['logincompany'])) {
   }
 }
 // add a posting to a database
-if (isset($_POST['submitjob'])) {
-  # code...
-  $jobtitle = mysqli_real_escape_string($db, $_POST['jobtitle']);
-  $jobentrylevel = mysqli_real_escape_string($db, $_POST['jobentrylevel']);
-  $jobindustry = mysqli_real_escape_string($db, $_POST['jobindutsry']);
-  $jobdescription = mysqli_real_escape_string($db, $_POST['jobdescription']);
-  $jobdescriptionpdf = mysqli_real_escape_string($db, $_POST['pdfdescription']);
-  //adding to database
-  $adding = "INSERT INTO jobsposting(Jobtitle, Jobentrylevel, Jobindutsry, Job description, Jobdescriptionpdf )VALUES('$jobtitle','$jobentrylevel','$jobindutsry', '$jobdescription', '$jobdescriptionpdf')";
-  mysql_query($db, $adding);
-}
+// if (isset($_POST['submitjob'])) {
+//   # code...
+//   $jobtitle = mysqli_real_escape_string($db, $_POST['jobtitle']);
+//   $jobentrylevel = mysqli_real_escape_string($db, $_POST['jobentrylevel']);
+//   $jobindustry = mysqli_real_escape_string($db, $_POST['jobindutsry']);
+//   $jobdescription = mysqli_real_escape_string($db, $_POST['jobdescription']);
+//   $jobdescriptionpdf = mysqli_real_escape_string($db, $_POST['pdfdescription']);
+//   //adding to database
+//   $adding = "INSERT INTO jobsposting(Jobtitle, Jobentrylevel, Jobindutsry, Job description, Jobdescriptionpdf )VALUES('$jobtitle','$jobentrylevel','$jobindutsry', '$jobdescription', '$jobdescriptionpdf')";
+  // mysql_query($db, $adding);
+
+// }
+
+
   ?>

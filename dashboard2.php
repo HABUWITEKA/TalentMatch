@@ -4,7 +4,9 @@ include('server2.php');
 $email=$_SESSION['email'];
 $dbconnect=mysqli_connect('localhost', 'HABUWITEKA', '17170', 'talentmatch');
 $query = mysqli_query($dbconnect, "SELECT * FROM comapnyusers where email='$email'");
+$query2 = mysqli_query($dbconnect,"SELECT * FROM jobsposting where Email='$email'" );
 $row = mysqli_fetch_assoc($query);
+$row2 = mysqli_fetch_assoc($query2);
 
 //profile picture things
  if (isset($_POST['upload'])) {
@@ -67,6 +69,19 @@ if (isset($_POST['update'])) {
     mysqli_query($dbconnect, $update3);
     header('location:dashboard2.php');
 }
+if (isset($_POST['Jobsubmit'])) {
+    # code...
+    $jobtitle = mysqli_real_escape_string($db, $_POST['jobtitle']);
+    $jobentrylevel = mysqli_real_escape_string($db, $_POST['jobentrylevel']);
+    $jobindustry = mysqli_real_escape_string($db, $_POST['jobindustry']);
+    $jobdescription = mysqli_real_escape_string($db, $_POST['jobdescription']);
+    $jobdescriptionpdf = mysqli_real_escape_string($db, $_POST['pdfdescription']);
+    $jobdeadline = mysqli_real_escape_string($db, $_POST['Deadline']);
+    //adding to database
+    $query = "INSERT INTO jobsposting (Jobtitle, Jobentrylevel, Jobindustry, jobdescription, jobdescriptionpdf, Deadline, Email )
+    VALUES ('$jobtitle','$jobentrylevel','$jobindustry', '$jobdescription', '$jobdescriptionpdf', '$jobdeadline', '$email')";
+    mysqli_query($db, $query);
+  }
 ?>
 
 <!DOCTYPE html>
@@ -77,17 +92,26 @@ if (isset($_POST['update'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $row['companyname']."'s". " "."Dashboard";  ?></title>
     <link rel="stylesheet" href="css/main3.css">
-    <link rel="stylesheet" type="text/css" href="css/newcss/another.css">
+    <link rel="stylesheet" href="css/newcss/another.css">
     <script type="text/javascript" src="js/java.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+    <script type="text/javascript">
+      function displayjobposter(){
+	var element = document.getElementById("postjob")
+	element.style.display = "block";
+}
+function closedisplayjobposter(){
+	var element = document.getElementById("postjob")
+	element.style.display = "none";
+}
+    </script>
 	<title></title>
 </head>
 <body>
 <header id="header">
-    <img src="img/talent.png" class="logo">
+  <img src="img/talent.png" class="logo">
     <img src="<?php echo 'img/company/' . $row['Companylogo'] ?>" id="smallpp">
     <a class="myaccount" name="logout" href="logout2.php" style="text-decoration:none">logout</a>
-    <div class="line">
+    <div class="line" style="height:388px;">
         
     </div>
   <section class="navigation">
@@ -144,50 +168,104 @@ if (isset($_POST['update'])) {
     </p>
     <div style="top:-20px;position: relative;">
     <button class="btn">Post a job</button>
-    <button class="btn updatebtnn" onclick="updatepop()">Update Info</button></div>
+    <button class="btn updatebtnn" onclick="updatepop()">Update Info</button>
+</div>
+</div>
+  <div>  <!-- In the case the user wants to update his informationn and we update it in the database -->
+
+<!-- udukoryo -->
+<div class="aboutmediv activejobs">
+    <div id="toptitle">
+    <p id="titlediv">Active Job offers</p>
+    <button class="edit btn" onclick="edittoggle()">View</button></div>
+    <p id="abouttext" class="statistics">
+        <?php
+         echo $row['companyname']." "."has 2 active job offers";
+            ?>
+    </p>
+</div>
+
+<div class="aboutmediv activejobs deadjobs">
+    <div id="toptitle">
+    <p id="titlediv">Dead Job offers</p>
+    <button class="edit btn" onclick="edittoggle()">View</button></div>
+    <p id="abouttext" class="statistics">
+        <?php
+         echo $row['companyname']." "."has 0 Dead job offers";
+            ?>
+    </p>
+    
+</div>
+
+<div class="aboutmediv activejobs ">
+    <div id="toptitle">
+    <p id="titlediv">Active Internship offers</p>
+    <button class="edit btn" onclick="edittoggle()">View</button></div>
+    <p id="abouttext" class="statistics">
+        <?php
+         echo $row['companyname']." "."has 0 active job offers";
+            ?>
+    </p>
+</div>
+
+<div class="aboutmediv activejobs deadjobs">
+    <div id="toptitle">
+    <p id="titlediv">Dead Internship offers</p>
+    <button class="edit btn" onclick="edittoggle()">View</button></div>
+    <p id="abouttext" class="statistics">
+        <?php
+         echo $row['companyname']." "."has 1 dead internship offers";
+            ?>
+    </p>
+</div>
+</header> 
 </div>
 </section>
-<!-- In the case the user wants to update his informationn and we update it in the database -->
 <form action="dashboard2.php" class="updateform" method="post" name="updateinfo" id="updateform">
-    <label>Company Name:</label><br>
+    <label class="label">Company Name:</label><br>
     <input type="text" name="cname" value="<?php echo $row['companyname'] ?>"><br>
-    <label>Telephone:</label><br>
+    <label class="label">Telephone:</label><br>
     <input type="text" name="tel" value="<?php echo $row['telephone'] ?>"><br>
-    <label>Industry:</label><br>
+    <label class="label">Industry:</label><br>
     <input type="text" name="industry" value="<?php echo $row['Industry']; ?>"><br>
-    <label>Website:</label><br>
+    <label class="label">Website:</label><br>
     <input type="text" name="website" value="<?php echo $row['Website']; ?>"><br>
-    <input type="submit" name="update" value="Update" class="btn updatebtn" onclick="updatepop()">
+    <div id="mybtns">
     <button class="btn cancel" onclick="updatedpop()">Cancel</button>
+    <button type="submit" name="update" value="Update" onclick="updatepop()" class="btn updatebtn">Update</button></div>
 </form>
-</header> 
 <div id="jobs">
     <!-- <h1 style="left:300px;position: absolute;top:300px;">Post a job</h1> -->
     <div id="postjob">
         <div id="postbanner">
             <p style="top:-15px;position:relative;">Post it here!</p>
         </div>
-
+        <img src="img/close.png" class="closeimage" onclick="closedisplayjobposter()">
         <!--  -->
-        <form>
-            <label>Job Title</label>
-            <input type="text" name="jobtitle" id="jobtitle" placeholder="Job title">
+        <form action="dashboard2.php" method="post">
+            <div id="jobbdead">
+            <label id="jobtitlelabel">Job Title</label>
+            <input type="text" name="jobtitle" id="jobtitle" placeholder="Job title"></div>
+            <div id="deadline">
+            <label id="deadlinelabel">Deadline</label>
+            <input type="date" name="Deadline" id="Deadline"></div>
             <label id="entrylevellabel">Entry Level</label>
-            <select id="entrylevel">
+            <select id="jobentrylevel" name="jobentrylevel">
                 <option>Job's Entry Level:</option>
                 <option>Basic</option>
                 <option>Middle</option>
                 <option>High</option>
             </select>
             <label id="jobindustrylabel">Job's Industry</label>
-            <input type="text" name="jobindutsry" id="jobindustry" placeholder="Job Industry">
+            <input type="text" name="jobindustry" id="jobindustry" placeholder="Job Industry">
             <label id="jobdescriptionlabel">Job description</label>
-            <textarea id="jobdescription" placeholder="Job Description"></textarea>
+            <textarea id="jobdescription" placeholder="Job Description" name="jobdescription"></textarea>
             <p id="alternative">Or, choose to upload Pdf of job description</p>
             <input type="file" name="pdfdescription" value="Upload Pdf">
-            <input type="submit" name="submitjob" value="Post The job">
+            <input type="submit" name="Jobsubmit" value="Post The job">
         </form>
     </div>
+    <button class="postbtn" onclick="displayjobposter()">Post A job!</button>
 </div>
 </body>
 </html>

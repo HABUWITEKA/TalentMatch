@@ -1,10 +1,13 @@
 <?php
 //session_start();
 include('server.php');
+include('server2.php');
 $email=$_SESSION['email'];
 $dbconnect=mysqli_connect('localhost', 'HABUWITEKA', '17170', 'talentmatch');
 $query = mysqli_query($dbconnect, "SELECT * FROM studentusers where email='$email'");
+$query2 = mysqli_query($dbconnect,"SELECT * FROM jobsposting where Id=1" );
 $row = mysqli_fetch_assoc($query);
+$row2 = mysqli_fetch_assoc($query2);
 //saving
 if (isset($_POST['Save'])) {
    $abouttext = mysqli_real_escape_string($dbconnect,$_POST['editedbio']);
@@ -350,7 +353,7 @@ if (isset($_POST['update'])) {
 
       <section class="opcorner">
         <div class="posts" id="Technology" >
-            <p class="posttitle" id="Technology">Front End developer at<br>  TalentMatch</p>
+            <p class="posttitle" id="Technology"><?php echo $row2['Jobtitle']?></p>
             <img class="postimg" src="img/undraw_responsive_6c8s.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
@@ -419,27 +422,27 @@ if (isset($_POST['update'])) {
     var z = document.getElementById('Education');
     var t = document.getElementById('Auditing');
     if (selector=="Technology") {
-      // y.style.display ="none";
-      // z.style.display = "none";
-      // t.style,display = "none";
+      y.style.display ="none";
+      z.style.display = "none";
+      t.style,display = "none";
       console.log("dudue");
     }
-    // if (selector=="Education") {
-    //   y.style.display ="none";
-    //   x.style.display = "none";
-    //   t.style,display = "none";
-    //   console.log("Education");
-    // }
-    // if (selector=="Auditing") {
-    //   y.style.display ="none";
-    //   z.style.display = "none";
-    //   x.style,display = "none";
-    // }
-    // else{
-    //   x.style.display ="none";
-    //   z.style.display="none";
-    //   t.style.display="none";
-    // }
+    if (selector=="Education") {
+      y.style.display ="none";
+      x.style.display = "none";
+      t.style,display = "none";
+      console.log("Education");
+    }
+    if (selector=="Auditing") {
+      y.style.display ="none";
+      z.style.display = "none";
+      x.style,display = "none";
+    }
+    else{
+      x.style.display ="none";
+      z.style.display="none";
+      t.style.display="none";
+    }
     
 }
       </script>
@@ -507,7 +510,7 @@ document.getElementById('btn').addEventListener('click', show_selected);
   
 <div id="Internships" class="intern">
     <div class="posts postss">
-            <p class="posttitle">Front End developer at<br>  TalentMatch</p>
+            <p class="posttitle"><?php echo $row2['Jobtitle'] ?></p>
             <img class="postimg" src="img/undraw_responsive_6c8s.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
