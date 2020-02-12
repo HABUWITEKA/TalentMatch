@@ -352,6 +352,9 @@ nav{
   #aboutme{
     display: block;
   }
+  #events{
+    display: none;
+  }
   #formtoupload{
     width: 300px;
     height: 60px;

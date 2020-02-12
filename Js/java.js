@@ -18,14 +18,14 @@ function displayaboutme(){
 	var jobs = document.getElementById("jobs");
 	var internships = document.getElementById("Internships");
 	var resources = document.getElementById("Resources")
-	
+	var events = document.getElementById("events");
 	// let's hide the other stuff then;
 	aboutme.style.display = "block";
 	jobs.style.display = "none";
 	internships.style.display = "none";
 	resources.style.display="none";
 	applications.style.display = "none";
-
+	events.style.display="none";
 	var deleteactive = document.getElementsByClassName("links");
 
 
@@ -50,15 +50,16 @@ function displayjobs(){
 	var jobs = document.getElementById("jobs");
 	var internships = document.getElementById("Internships");
 	var resources = document.getElementById("Resources")
-	
+	var events = document.getElementById("events");
 	// let's hide the other stuff then;
 	aboutme.style.display = "none";
 	jobs.style.display = "block";
 	internships.style.display = "none";
 	resources.style.display="none";
 	applications.style.display = "none";
+	events.style.display="none";
 		var deleteactive = document.getElementById("active");
-
+		
     
     //BCKG variables
      var abt_bckg = document.getElementById("bckg1");
@@ -84,14 +85,13 @@ function displayinternships(){
 	var jobs = document.getElementById("jobs");
 	var internships = document.getElementById("Internships");
 	var resources = document.getElementById("Resources")
-	
-	// let's hide the other stuff then;
+	var events = document.getElementById("events");	// let's hide the other stuff then;
 	aboutme.style.display = "none";
 	jobs.style.display = "none";
 	internships.style.display = "block";
 	resources.style.display="none";
 	applications.style.display = "none";
-
+	events.style.display="none";
 	//BCKG variables
      var abt_bckg = document.getElementById("bckg1");
      var bckg2 = document.getElementById("bckg2");
@@ -115,14 +115,14 @@ function displayresources(){
 	var jobs = document.getElementById("jobs");
 	var internships = document.getElementById("Internships");
 	var resources = document.getElementById("Resources")
-	
+	var events = document.getElementById("events");
 	// let's hide the other stuff then;
 	aboutme.style.display = "none";
 	jobs.style.display = "none";
 	internships.style.display = "none";
 	resources.style.display="block";
 	applications.style.display = "none";
-
+	events.style.display="none";
 	//BCKG variables
      var abt_bckg = document.getElementById("bckg1");
      var bckg2 = document.getElementById("bckg2");
@@ -147,14 +147,15 @@ function displayapplications(){
 	var jobs = document.getElementById("jobs");
 	var internships = document.getElementById("Internships");
 	var resources = document.getElementById("Resources");
-	
+	var events = document.getElementById("events");
 	// let's hide the other stuff then;
 	aboutme.style.display = "none";
 	jobs.style.display = "none";
 	internships.style.display = "none";
 	resources.style.display="none";
 	applications.style.display = "block";
-     
+	events.style.display="none";
+	
      //BCKG variables
      var abt_bckg = document.getElementById("bckg1");
      var bckg2 = document.getElementById("bckg2");
@@ -168,6 +169,38 @@ function displayapplications(){
      bckg4.style.background="";
      bckg5.style.background="";
      bckg6.style.background="";
+
+
+
+}
+function displayevents(){
+	var applications = document.getElementById("applications");
+	var aboutme = document.getElementById("aboutme");
+	var jobs = document.getElementById("jobs");
+	var internships = document.getElementById("Internships");
+	var resources = document.getElementById("Resources");
+	var events = document.getElementById("events");
+	// let's hide the other stuff then;
+	aboutme.style.display = "none";
+	jobs.style.display = "none";
+	internships.style.display = "none";
+	resources.style.display="none";
+	applications.style.display = "none";
+	events.style.display="block";
+     
+     //BCKG variables
+     var abt_bckg = document.getElementById("bckg1");
+     var bckg2 = document.getElementById("bckg2");
+     var bckg3 = document.getElementById("bckg3");
+     var bckg4 = document.getElementById("bckg4");
+     var bckg5 = document.getElementById("bckg5");
+     var bckg6 = document.getElementById("bckg6");
+     abt_bckg.style.background = "";
+     bckg2.style.background="";
+     bckg3.style.background="";
+     bckg4.style.background="";
+     bckg5.style.background="";
+     bckg6.style.background="#C8E31C";
 
 
 

@@ -170,7 +170,7 @@ if (isset($_POST['update'])) {
         <a href="#" class="links" id="bckg2" onclick="displayjobs()" onclick="classes()" ><img class="icon" src="img/jobi.svg">&nbspJobs</a>
         <a href="#" class="links" id="bckg4" onclick="displayinternships()" onclick="classes()"><img class="icon" src="img/job.svg">&nbspInternships</a>
         <a href="#" class="links" id="bckg5" onclick="displayresources()" onclick="classes()"><img class="icon" src="img/resoure.svg">&nbspResources</a>
-        <a href="#" class="links" id="bckg6" onclick="displayaboutme()" onclick="classes()"><img class="icon" src="img/business.png">&nbspEvents</a>
+        <a href="#" class="links" id="bckg6" onclick="displayevents()" onclick="classes()"><img class="icon" src="img/business.png">&nbspEvents</a>
     </nav>
 </section>
 </header> 
@@ -585,6 +585,27 @@ document.getElementById('btn').addEventListener('click', show_selected);
         How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
         <button class="btnw">Enroll</button>
     </div>
+</div>
+<div id="events">
+ <div class="events">
+    <img src="img/bckg1.jpg" class="eventimg">
+    <p class="eventname">Name of the event</p>
+    <p class="eventdesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eum, 
+      magnam qui quaerat amet distinctio eveniet dolores perspiciatis nisi 
+    minus delectus, hic alias, provident voluptatibus odio facere. Voluptas, itaque aut.amet distinctio eveniet dolores perspiciatis nisi 
+    minus delectus, hic alias, provident voluptatibus odio facere. Voluptas, itaque aut.</p>
+    <button class="viewevent">View more</button> 
+  </div>
+
+  <div class="events">
+    <img src="img/business.png" class="eventimg">
+    <p class="eventname">Name of the event 2</p>
+    <p class="eventdesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eum, 
+      magnam qui quaerat amet distinctio eveniet dolores perspiciatis nisi 
+    minus delectus, hic alias, provident voluptatibus odio facere. Voluptas, itaque aut.amet distinctio eveniet dolores perspiciatis nisi 
+    minus delectus, hic alias, provident voluptatibus odio facere. Voluptas, itaque aut.</p>
+    <button class="viewevent">View more</button> 
+  </div>
 </div>
 </body>
 </html>

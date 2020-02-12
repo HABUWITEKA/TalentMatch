@@ -139,3 +139,50 @@
 #Finance{
   display:block ;
 }
+
+.events{
+  background-color: lavenderblush;
+  border-radius: 4px;
+  width: 700px;
+  height:fit-content;
+  box-shadow: lightgoldenrodyellow;
+  left:500px;
+  top:30px;
+  position: relative;
+  margin-top: 50px;;
+}
+.eventimg{
+  width:200px;
+  height: 200px;
+}
+.eventname{
+  font-family: Microsoft Yahei UI;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: aqua;
+  font-weight: bold;
+  top: -15px;
+  padding-left:200px;
+  position: absolute;
+}
+.eventdesc{
+  font-family: Microsoft Yahei UI;
+  font-size: 13px;
+  top:20px;
+  position:absolute;
+  padding-left: 200px;
+  line-height: 0.25in;
+}
+.viewevent{
+  background-color: aqua;
+  color: white;
+  font-family: Microsoft Yahei UI;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  left:600px;
+  top:170px;
+  position:absolute;
+  font-size: 16px;
+}
