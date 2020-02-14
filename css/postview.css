@@ -1,0 +1,101 @@
+.companypostingimg{
+    width: 60px;
+    height: 60px;
+    left:370px;
+    top: -30px;
+    position: absolute;
+}
+.postview{
+    width:800px;
+    height: 930px;
+    background-color: white;
+    font-family: Microsoft Yahei UI;
+    font-size: 17px;
+    color: black;
+    left:400px;
+    top:130px;
+    position: absolute;
+}
+.jobname{
+    font-weight: bold;
+    left:250px;
+    top:30px;
+    position: absolute;
+    color: chartreuse;
+}
+.Companyposting{
+    top:30px;
+    left:440px;
+    position: absolute;;
+}
+.jobind{
+    top:60px;
+    left:40px;
+    font-size: 15px;
+    position: absolute;
+    color: chartreuse;
+}
+.inditself{
+    font-size: 15px;
+    top:60px;
+    left:140px;
+    position: absolute;
+}
+.entryitself{
+    font-size: 15px;
+    top:60px;
+    left:125px;
+    position: absolute;
+}
+.deaditself{
+    font-size: 15px;
+    top:60px;
+    left:115px;
+    width:300px;
+    position: absolute;
+}
+ .ald{
+    top:0px;
+    left:250px;
+    position: absolute;
+    width:200px;
+}
+.ald2{
+    top: 0px;
+    left:200px;
+    position: absolute;   
+}
+#details{
+    left:45px;
+    position: relative;
+}
+
+    
+iframe{
+    width: 620px;
+    left:-410px;
+    position: absolute;
+    top:160px;
+    height:400px;
+
+}
+form{
+    top:580px;
+    position:absolute;
+    left:-410px;
+}
+.submitresume{
+    left:410px;
+    top:200px;
+    position: absolute;
+}
+textarea{
+    width: 620px;
+    height: 200px;
+    resize: none;
+}
+label{
+    color: chartreuse;
+    font-weight: bold;
+    font-family: Microsoft Yahei UI;
+}

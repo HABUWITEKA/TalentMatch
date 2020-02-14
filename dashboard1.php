@@ -115,6 +115,7 @@ if (isset($_POST['update'])) {
     <title><?php echo $row['firstname']."'s". " "."Dashboard";  ?></title>
     <link rel="stylesheet" type="text/css" href="css/main3.css">
     <link rel="stylesheet" type="text/css" href="css/newcss/css.css">
+    <link rel="stylesheet" type="text/css" href="css/postview.css">
     <script type="text/javascript" src="js/java.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  s
     <!-- For edit scrioopt -->
@@ -334,8 +335,30 @@ if (isset($_POST['update'])) {
   </tbody>
 </table>
 </div>
+<!-- What the user sees when he/she open the job industry -->
+<div class="postview">
+ <img class="companypostingimg" src="img/close.png">
+ <p class="jobname">Front-End developer - <p class="Companyposting">MTN Rwanda</p></p>
+<div id="details">
+ <div class=""><p class="jobind"><b>Job Industry</b>:<p class="inditself">E-commerce</p></p><div>
+ <div class="ald"><p class="jobind"><b>Entry level</b>:<p class="entryitself">Middle</p></p><div>
+ <div class="ald2"><p class="jobind"><b>Deadline</b>:<p class="deaditself">29 Jan 2020</p></p><div>
+      </div>
+  <p class="jobdesc"><iframe src="twun.pdf" frameborder="2"></iframe></p>    
+  <form>
+    <label>Why are you applying?(Max.100 words)</label><br>
+    <textarea placeholder="Write here" maxlength="100"></textarea><br>
+    <label>Submit your cover letter</label><br>
+    <input type="file" name="coverletter"><br>
+    <div class="submitresume"><br>
+    <label>Submit your Resume</label><br>
+    <input type="file" name="coverletter"><br>
+  </div>
+  <input type="submit" name="applying" value="Apply!">
+  </form>
+</div>
 <!-- jobssssssss -->
-<div id="jobs" class="jobscorner">
+<div id="jobs" class="jobscorner" style="visibility: hidden;" >
     <!-- filters all related to type of the job -->
     <!-- <h1 style="top:200px;position: absolute;">Jobs corner</h1> -->
     <div id="myBtnContainer">
