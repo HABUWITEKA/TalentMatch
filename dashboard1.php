@@ -337,8 +337,11 @@ if (isset($_POST['update'])) {
 </div>
 <!-- What the user sees when he/she open the job industry -->
 <div class="postview">
- <img class="companypostingimg" src="img/close.png">
- <p class="jobname">Front-End developer - <p class="Companyposting">MTN Rwanda</p></p>
+  <div class="return">
+    <p style="width:200px; color: white;left:10px;position: absolute;top:-10px;">Return to jobs!</p>
+  </div>
+ <img class="companypostingimg" src="img/talent.png">
+ <p class="jobname">Front-End developer - <p class="Companyposting">Talent Match</p></p>
 <div id="details">
  <div class=""><p class="jobind"><b>Job Industry</b>:<p class="inditself">E-commerce</p></p><div>
  <div class="ald"><p class="jobind"><b>Entry level</b>:<p class="entryitself">Middle</p></p><div>
@@ -354,7 +357,7 @@ if (isset($_POST['update'])) {
     <label>Submit your Resume</label><br>
     <input type="file" name="coverletter"><br>
   </div>
-  <input type="submit" name="applying" value="Apply!">
+  <input type="submit" name="applying" value="Apply!" class="apply">
   </form>
 </div>
 <!-- jobssssssss -->

@@ -1,9 +1,10 @@
 .companypostingimg{
-    width: 60px;
+    width: 90px;
     height: 60px;
     left:370px;
     top: -30px;
     position: absolute;
+    visibility: hidden;
 }
 .postview{
     width:800px;
@@ -15,6 +16,8 @@
     left:400px;
     top:130px;
     position: absolute;
+    visibility: hidden;
+
 }
 .jobname{
     font-weight: bold;
@@ -93,9 +96,31 @@ textarea{
     width: 620px;
     height: 200px;
     resize: none;
+    font-family: Microsoft Yahei UI;
 }
 label{
     color: chartreuse;
     font-weight: bold;
     font-family: Microsoft Yahei UI;
 }
+.apply{
+    background-color:chartreuse;
+    text-align: center;
+    border: none;
+    color: white;
+    font-family: Microsoft Yahei UI;
+    font-size: 30px;
+    width: 600px;
+    z-index: 200;
+    margin-left: 7px;
+    margin-top: 8px}
+
+.return{
+    background: black;
+    width: 130px;
+    height: 30px;
+    left:0px;
+    position: absolute;
+    
+    font-size: 15px;
+}    
