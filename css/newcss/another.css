@@ -12,6 +12,20 @@
 	transform: scale(1,1);
 	z-index: 100;
 }
+#postjob2{
+	width: 600px;
+	height: 570px;
+	background-color: white;
+	left:530px;
+	top:120px;
+	position: absolute;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 4px;
+	border-color: orange;
+	transform: scale(1,1);
+	z-index: 100;
+}
 #postbanner{
 	width:200px;
 	height: 40px;
@@ -207,6 +221,10 @@ margin-left: -65px;
 	position: absolute;
 }
 #postjob{
+	display: none;
+	/* z-index: 300; */
+}
+#postjob2{
 	display: none;
 	/* z-index: 300; */
 }

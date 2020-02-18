@@ -103,6 +103,14 @@ function closedisplayjobposter(){
 	var element = document.getElementById("postjob")
 	element.style.display = "none";
 }
+function displayjobposter2(){
+	var element = document.getElementById("postjob2")
+	element.style.display = "block";
+}
+function closedisplayjobposter2(){
+	var element = document.getElementById("postjob2")
+	element.style.display = "none";
+}
     </script>
 	<title></title>
 </head>
@@ -266,6 +274,13 @@ function closedisplayjobposter(){
         </form>
     </div>
     <button class="postbtn" onclick="displayjobposter()">Post A job!</button>
+</div>
+
+
+<div id="Internships">
+    <!-- <h1 style="left:300px;position: absolute;top:300px;">Post a job</h1> -->
+    
+    <button class="postbtn" onclick="displayjobposter()">Post Internship!</button>
 </div>
 </body>
 </html>
