@@ -258,17 +258,16 @@ nav{
   }
 
 #editarea{
-      top:167px;
-      left:780px;
-      width:540px;
+      top:-376px;
+      left:1190px;
       position:absolute;
       display: none;
   }
 #editarea2{
-    top:482px;
-    left:780px;
+  top:-61px;
+  left:1190px;
     position: absolute;
-    /*background-color: lightcoral;*/
+    
     display: none;
   }
 
@@ -277,15 +276,15 @@ nav{
     position: absolute;
   }
 #editarea3{
-    top:797px;
-    left:780px;
+    top:254px;
+    left:1190px;
     position: absolute;
 /*background-color: lightcoral;*/
     display: none;
   }
 #editedbio{
-    width:545px;
-    height: 250px;
+    width:550px;
+    height: 256px;
     resize: none;
     font-family: Microsoft YaHei UI;
     animation-delay: .3;
@@ -348,6 +347,8 @@ nav{
   }
    #Resources{
     display: none;
+    top:-100px;
+    position: absolute;
   }
   #aboutme{
     display: block;

@@ -32,10 +32,7 @@
   position: relative;
   /*display: none;*/
   padding-left: 20px;
-  
-}
-.posts{
-  /*overflow: hidden;*/
+  filter: blur(0px);
 }
 
 .posts :hover{
@@ -56,6 +53,7 @@
   height: 150px;
   top:0px;
   position: absolute;
+  cursor:hand;
 }
 .posttitle{
   width:max-content;
@@ -89,28 +87,36 @@
   left:100px;
   position: absolute;
   transform: scale(.67,.67);
+  
+
 }
 #Resources{
    transform: scale(.95,.95);
    margin-left: 240px;
-   margin-top: 190px;;
-   left:20px;
-   position: relative;
+   margin-top: 190px;
+   left:180px;
+   top:50px;
+   position: absolute;
 }
 .box {
-  background: #808080;
+  background:whitesmoke;
   border-radius: 2px;
   display: inline-block;
-  height: 260px;
+  height: 160px;
+  width: 690px;
   margin: 1rem;
   position: relative;
-  width: 300px;
-  margin-left: 50px;
+  margin-left: 80px;
+  
 }
 .coursename{
   font-weight: bold;
   font-family: Microsoft Yahei UI;
-  padding-left: 25px;
+  padding-left: 220px;
+  top: 40px;
+  position: absolute;
+  font-size: 25px;
+  letter-spacing: 2px;
   color: #C8E31C;
 }
 .coursedesc{
@@ -121,17 +127,32 @@
   padding-left: 25px;
   margin-right: 25px;
 }
+.courseimg{
+  width: 200px;
+  height: inherit;
+}
 .btnw{
   background-color: #1CC8E3 ;
   color: rgb(247, 247, 247);
   font-family: Microsoft YaHei UI;
   font-size: 15px;
   border:none;
-  top: 225px;
-  left:45px;
+  top: 125px;
+  left:217px;
   position: absolute;
-  float: left;
   border-spacing: 200px;
+}
+.viewmore{
+  background-color: transparent;
+  border-style: solid;
+  border-radius: 10px;
+  border-color:#1CC8E3 ;
+  text-align: center;
+  font-weight: bold;
+   top:65px;
+   position: absolute;
+   left:580px;
+   font-size: 17px;
 }
 .btnw2{
   margin-left:80px;
@@ -172,9 +193,9 @@
   font-family: Microsoft Yahei UI;
   font-size: 18px;
   letter-spacing: 1px;
-  color: aqua;
+  color:silver;
   font-weight: bold;
-  top: -15px;
+  top: -5px;
   padding-left:200px;
   position: absolute;
 }

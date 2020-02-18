@@ -49,7 +49,7 @@ function displayjobs(){
 	var aboutme = document.getElementById("aboutme");
 	var jobs = document.getElementById("jobs");
 	var internships = document.getElementById("Internships");
-	var resources = document.getElementById("Resources")
+	var resources = document.getElementById("Resources");
 	var events = document.getElementById("events");
 	// let's hide the other stuff then;
 	aboutme.style.display = "none";
@@ -227,6 +227,18 @@ function displayImage(e) {
     }
     reader.readAsDataURL(e.files[0]);
   }
+}
+function postview(){
+	var post = document.getElementById("postview");
+	var other = document.getElementById("jobo");
+	   post.style.visibility="visible";
+	   other.style.filter ="blur(5px)";
+}
+function postviewback(){
+	var post = document.getElementById("postview");
+	var other = document.getElementById("jobo");
+	   post.style.visibility="hidden";
+	   other.style.filter ="blur(0px)";
 }
 
 

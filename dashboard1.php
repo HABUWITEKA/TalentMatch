@@ -177,6 +177,10 @@ if (isset($_POST['update'])) {
 </header> 
 <!-- Profile and ability to change -->
 <div id="aboutme">
+<form class="search-container">
+    <input type="text" id="search-bar" placeholder="Search My course">
+    <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+  </form>
 <div class="portfolio" style="position: fixed;">
    <div class ="container" >
  <img src="<?php echo 'img/' . $row['profilepicture'] ?>" class="profilepic" id="profiledisplay" onclick="triggerclick()">
@@ -292,6 +296,10 @@ if (isset($_POST['update'])) {
 
 <!-- Application corner and own applications at a glance -->
 <div id="applications">
+<form class="search-container">
+    <input type="text" id="search-bar" placeholder="Search My course">
+    <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+  </form>
     <!-- filters all related to type of the job -->
     <!-- <h1 style="top:200px;position: absolute;">Applications corner</h1> -->
     <table>
@@ -336,34 +344,12 @@ if (isset($_POST['update'])) {
 </table>
 </div>
 <!-- What the user sees when he/she open the job industry -->
-<div class="postview">
-  <div class="return">
-    <p style="width:200px; color: white;left:10px;position: absolute;top:-10px;">Return to jobs!</p>
-  </div>
- <img class="companypostingimg" src="img/talent.png">
- <p class="jobname">Front-End developer - <p class="Companyposting">Talent Match</p></p>
-<div id="details">
- <div class=""><p class="jobind"><b>Job Industry</b>:<p class="inditself">E-commerce</p></p><div>
- <div class="ald"><p class="jobind"><b>Entry level</b>:<p class="entryitself">Middle</p></p><div>
- <div class="ald2"><p class="jobind"><b>Deadline</b>:<p class="deaditself">29 Jan 2020</p></p><div>
-      </div>
-  <p class="jobdesc"><iframe src="twun.pdf" frameborder="2"></iframe></p>    
-  <form>
-    <label>Why are you applying?(Max.100 words)</label><br>
-    <textarea placeholder="Write here" maxlength="100"></textarea><br>
-    <label>Submit your cover letter</label><br>
-    <input type="file" name="coverletter"><br>
-    <div class="submitresume"><br>
-    <label>Submit your Resume</label><br>
-    <input type="file" name="coverletter"><br>
-  </div>
-  <input type="submit" name="applying" value="Apply!" class="apply">
-  </form>
-</div>
+
 <!-- jobssssssss -->
-<div id="jobs" class="jobscorner" style="visibility: hidden;" >
+<div id="jobs" class="jobscorner">
     <!-- filters all related to type of the job -->
     <!-- <h1 style="top:200px;position: absolute;">Jobs corner</h1> -->
+    <div id="jobo">
     <div id="myBtnContainer">
         <button class="filterr activee" onclick="filterSelection('All')">All</button>
 
@@ -378,61 +364,61 @@ if (isset($_POST['update'])) {
       </div>
 
       <section class="opcorner">
-        <div class="posts" id="Technology" >
+        <div class="posts" id="Technology"  onclick="postview()" >
             <p class="posttitle" id="Technology"><?php echo $row2['Jobtitle']?></p>
             <img class="postimg" src="img/undraw_responsive_6c8s.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts Part-time" id="Finance">
+        <div class="posts Part-time" id="Finance"  onclick="postview()">
             <p class="posttitle">Remote accountant at <br> Urumuri Ltd.</p>
             <img class="postimg" src="img/undraw_wallet_aym5.svg">
             <p class="type">Part-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts" id="Auditing">
+        <div class="posts" id="Auditing"  onclick="postview()">
             <p class="posttitle">Jobs at Mass Design</p>
             <img class="postimg" src="img/undraw_QA_engineers_dg5p.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts Full-time" id="Education">
+        <div class="posts Full-time" id="Education"  onclick="postview()">
             <p class="posttitle Technology">Students Affair Manager<br>at ALU Rwanda</p>
             <img class="postimg" src="img/undraw_candidate_ubwv.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts Full-time" id="Finance">
+        <div class="posts Full-time" id="Finance"  onclick="postview()">
             <p class="posttitle">Remote accountant at <br> H&B Holdings</p>
             <img class="postimg" src="img/undraw_working_late_pukg.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts Part-time" id="Finance">
+        <div class="posts Part-time" id="Finance"  onclick="postview()">
             <p class="posttitle">Part-time jobs at<br> Kigalitoday</p>
             <img class="postimg" src="img/undraw_online_media_62jb.svg">
             <p class="type">Part-time</p>
             <p class="due">Deadline:6 Nov 2020</p>
         </div>
-        <div class="posts Full-time" id="Technology">
+        <div class="posts Full-time" id="Technology"  onclick="postview()">
             <p class="posttitle">Front End developer at<br>  TalentMatch</p>
             <img class="postimg" src="img/undraw_responsive_6c8s.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts Part-time" id="Finance">
+        <div class="posts Part-time" id="Finance" onclick="postview()">
             <p class="posttitle">Remote accountant at <br> Urumuri Ltd.</p>
             <img class="postimg" src="img/undraw_wallet_aym5.svg">
             <p class="type">Part-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts Full-time" id="Auditing">
+        <div class="posts Full-time" id="Auditing"  onclick="postview()">
             <p class="posttitle">Jobs at Mass Design</p>
             <img class="postimg" src="img/undraw_QA_engineers_dg5p.svg">
             <p class="type">Full-time</p>
             <p class="due">Deadline:29 Jan 2020</p>
         </div>
-        <div class="posts Full-time" id="Education">
+        <div class="posts Full-time" id="Education"  onclick="postview()">
             <p class="posttitle">Students Affair Manager<br>at ALU Rwanda</p>
             <img class="postimg" src="img/undraw_candidate_ubwv.svg">
             <p class="type">Full-time</p>
@@ -531,9 +517,35 @@ if (isset($_POST['update'])) {
 }
 document.getElementById('btn').addEventListener('click', show_selected);
         </script>
+   </div>     
+        <section class="postview" id="postview">
+  <div class="return">
+    <p style="width:200px; color: white;left:10px;position: absolute;top:-10px; cursor:hand" onclick="postviewback()" >Return to jobs!</p>
+  </div>
+ <img class="companypostingimg" src="img/talent.png">
+ <p class="jobname">Front-End developer - <p class="Companyposting">Talent Match</p></p>
+<div id="details">
+ <div class=""><p class="jobind"><b>Job Industry</b>:<p class="inditself">E-commerce</p></p><div>
+ <div class="ald"><p class="jobind"><b>Entry level</b>:<p class="entryitself">Middle</p></p><div>
+ <div class="ald2"><p class="jobind"><b>Deadline</b>:<p class="deaditself">29 Jan 2020</p></p><div>
+      </div>
+  <p class="jobdesc"><iframe src="twun.pdf" frameborder="2"></iframe></p>    
+  <form>
+    <label>Why are you applying?(Max.100 words)</label><br>
+    <textarea placeholder="Write here" maxlength="100"></textarea><br>
+    <label>Submit your cover letter</label><br>
+    <input type="file" name="coverletter"><br>
+    <div class="submitresume"><br>
+    <label>Submit your Resume</label><br>
+    <input type="file" name="coverletter"><br>
+  </div>
+  <input type="submit" name="applying" value="Apply!" class="apply"  onclick="postviewback()">
+  </form>
+</div>
+</div>
+</section>
 </div>
 
-  
 <div id="Internships" class="intern">
   <div class="postss">
     <div class="posts">
@@ -575,57 +587,43 @@ document.getElementById('btn').addEventListener('click', show_selected);
    </div>    
 </div>
 <div id="Resources">
+  <!-- search box -->
+  <form class="search-container">
+    <input type="text" id="search-bar" placeholder="Search My course">
+    <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+  </form>
     <!-- filters all related to type of the job -->
    
     <div class="box">
-      <p class="coursename">Course 1</p>
-      <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
-        How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
+      
+      <img src="img/course.png" alt="" class="courseimg">
+      <p class="coursename">Team Building</p>
         <button class="btnw">Basic</button>
         <button class="btnw btnw2">Middle</button>
         <button class="btnw btnw3">High</button>
+        <button class="viewmore">View more</button>
     </div>
+
     <div class="box">
-    <p class="coursename">Course 1</p>
-      <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
-        How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
+      
+      <img src="img/career.jpg" alt="" class="courseimg">
+      <p class="coursename">Team Building</p>
         <button class="btnw">Basic</button>
         <button class="btnw btnw2">Middle</button>
         <button class="btnw btnw3">High</button>
+        <button class="viewmore">View more</button>
     </div>
+
     <div class="box">
-    <p class="coursename">Course 1</p>
-      <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
-        How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
+      
+      <img src="img/course.png" alt="" class="courseimg">
+      <p class="coursename">Team Building</p>
         <button class="btnw">Basic</button>
         <button class="btnw btnw2">Middle</button>
         <button class="btnw btnw3">High</button>
+        <button class="viewmore">View more</button>
     </div>
-    <div class="box">
-    <p class="coursename">Course 1</p>
-      <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
-        How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
-        <button class="btnw">Basic</button>
-        <button class="btnw btnw2">Middle</button>
-        <button class="btnw btnw3">High</button>
-    </div>
-    <div class="box">
-    <p class="coursename">Course 1</p>
-      <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
-        How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
-        
-        <button class="btnw">Basic</button>
-        <button class="btnw btnw2">Middle</button>
-        <button class="btnw btnw3">High</button>
-    </div>
-    <div class="box">
-    <p class="coursename">Course 1</p>
-      <p class="coursedesc">A solid background in microeconomics is useful for anyone who wants a better understanding of many important economic issues and problems. How do people decide whether and when to purchase a new laptop computer or cellular phone? 
-        How do firms decide whether to hire new employees, or to lay off some of their existing employees?</p>
-        <button class="btnw">Basic</button>
-        <button class="btnw btnw2">Middle</button>
-        <button class="btnw btnw3">High</button>
-    </div>
+    
 </div>
 <div id="events">
  <div class="events">
@@ -650,4 +648,3 @@ document.getElementById('btn').addEventListener('click', show_selected);
 </div>
 </body>
 </html>
- 
