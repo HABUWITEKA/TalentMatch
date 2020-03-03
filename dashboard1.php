@@ -5,9 +5,9 @@ include('server2.php');
 $email=$_SESSION['email'];
 $dbconnect=mysqli_connect('localhost', 'HABUWITEKA', '17170', 'talentmatch');
 $query = mysqli_query($dbconnect, "SELECT * FROM studentusers where email='$email'");
-$query2 = mysqli_query($dbconnect,"SELECT * FROM jobsposting where Id=1" );
+$jobs = mysqli_query($dbconnect,"SELECT * FROM jobsposting");
 $row = mysqli_fetch_assoc($query);
-$row2 = mysqli_fetch_assoc($query2);
+$row2 = mysqli_fetch_assoc($jobs);
 //saving
 if (isset($_POST['Save'])) {
    $abouttext = mysqli_real_escape_string($dbconnect,$_POST['editedbio']);
@@ -178,8 +178,7 @@ if (isset($_POST['update'])) {
 <!-- Profile and ability to change -->
 <div id="aboutme">
 <form class="search-container">
-    <input type="text" id="search-bar" placeholder="Search My course">
-    <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+    
   </form>
 <div class="portfolio" style="position: fixed;">
    <div class ="container" >
@@ -297,8 +296,8 @@ if (isset($_POST['update'])) {
 <!-- Application corner and own applications at a glance -->
 <div id="applications">
 <form class="search-container">
-    <input type="text" id="search-bar" placeholder="Search My course">
-    <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+    <!-- <input type="text" id="search-bar" placeholder="Search My course">
+    <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a> -->
   </form>
     <!-- filters all related to type of the job -->
     <!-- <h1 style="top:200px;position: absolute;">Applications corner</h1> -->
@@ -352,7 +351,6 @@ if (isset($_POST['update'])) {
     <div id="jobo">
     <div id="myBtnContainer">
         <button class="filterr activee" onclick="filterSelection('All')">All</button>
-
         <select class="filterr" id="industry" onchange="show_selected()">
            <option value="">Filter by industry</option>
            <option value="Technology">Technology</option>
@@ -364,68 +362,18 @@ if (isset($_POST['update'])) {
       </div>
 
       <section class="opcorner">
-        <div class="posts" id="Technology"  onclick="postview()" >
-            <p class="posttitle" id="Technology"><?php echo $row2['Jobtitle']?></p>
+       <?php  
+  $jobs=mysqli_query($dbconnect, "SELECT * FROM jobsposting");
+  while ($mydata = mysqli_fetch_assoc($jobs)) { ?>
+    <div class="posts" id="Technology"  onclick="postview()" >
+            <p class="posttitle" id="Technology"><?php echo $mydata['Jobtitle']?></p>
             <img class="postimg" src="img/undraw_responsive_6c8s.svg">
-            <p class="type">Full-time</p>
-            <p class="due">Deadline:29 Jan 2020</p>
-        </div>
-        <div class="posts Part-time" id="Finance"  onclick="postview()">
-            <p class="posttitle">Remote accountant at <br> Urumuri Ltd.</p>
-            <img class="postimg" src="img/undraw_wallet_aym5.svg">
-            <p class="type">Part-time</p>
-            <p class="due">Deadline:29 Jan 2020</p>
-        </div>
-        <div class="posts" id="Auditing"  onclick="postview()">
-            <p class="posttitle">Jobs at Mass Design</p>
-            <img class="postimg" src="img/undraw_QA_engineers_dg5p.svg">
-            <p class="type">Full-time</p>
-            <p class="due">Deadline:29 Jan 2020</p>
-        </div>
-        <div class="posts Full-time" id="Education"  onclick="postview()">
-            <p class="posttitle Technology">Students Affair Manager<br>at ALU Rwanda</p>
-            <img class="postimg" src="img/undraw_candidate_ubwv.svg">
-            <p class="type">Full-time</p>
-            <p class="due">Deadline:29 Jan 2020</p>
-        </div>
-        <div class="posts Full-time" id="Finance"  onclick="postview()">
-            <p class="posttitle">Remote accountant at <br> H&B Holdings</p>
-            <img class="postimg" src="img/undraw_working_late_pukg.svg">
-            <p class="type">Full-time</p>
-            <p class="due">Deadline:29 Jan 2020</p>
-        </div>
-        <div class="posts Part-time" id="Finance"  onclick="postview()">
-            <p class="posttitle">Part-time jobs at<br> Kigalitoday</p>
-            <img class="postimg" src="img/undraw_online_media_62jb.svg">
-            <p class="type">Part-time</p>
-            <p class="due">Deadline:6 Nov 2020</p>
-        </div>
-        <div class="posts Full-time" id="Technology"  onclick="postview()">
-            <p class="posttitle">Front End developer at<br>  TalentMatch</p>
-            <img class="postimg" src="img/undraw_responsive_6c8s.svg">
-            <p class="type">Full-time</p>
-            <p class="due">Deadline:29 Jan 2020</p>
-        </div>
-        <div class="posts Part-time" id="Finance" onclick="postview()">
-            <p class="posttitle">Remote accountant at <br> Urumuri Ltd.</p>
-            <img class="postimg" src="img/undraw_wallet_aym5.svg">
-            <p class="type">Part-time</p>
-            <p class="due">Deadline:29 Jan 2020</p>
-        </div>
-        <div class="posts Full-time" id="Auditing"  onclick="postview()">
-            <p class="posttitle">Jobs at Mass Design</p>
-            <img class="postimg" src="img/undraw_QA_engineers_dg5p.svg">
-            <p class="type">Full-time</p>
-            <p class="due">Deadline:29 Jan 2020</p>
-        </div>
-        <div class="posts Full-time" id="Education"  onclick="postview()">
-            <p class="posttitle">Students Affair Manager<br>at ALU Rwanda</p>
-            <img class="postimg" src="img/undraw_candidate_ubwv.svg">
-            <p class="type">Full-time</p>
-            <p class="due">Deadline:29 Jan 2020</p>
-        </div>
-        
-      </section>
+            <p class="type"><?php echo $mydata['Jobindustry']?></p>
+            <p class="due"><?php echo $mydata['Deadline']?></p>
+        </div>     
+  <?php } ?>
+?>
+      </section> 
       <script>
         function show_selected() {
     var selector = document.getElementById('industry').value;
@@ -531,10 +479,10 @@ document.getElementById('btn').addEventListener('click', show_selected);
       </div>
   <p class="jobdesc"><iframe src="twun.pdf" frameborder="2"></iframe></p>    
   <form>
-    <label>Why are you applying?(Max.100 words)</label><br>
-    <textarea placeholder="Write here" maxlength="100"></textarea><br>
+  <div class="submitcover">
     <label>Submit your cover letter</label><br>
     <input type="file" name="coverletter"><br>
+    </div>
     <div class="submitresume"><br>
     <label>Submit your Resume</label><br>
     <input type="file" name="coverletter"><br>
@@ -590,7 +538,7 @@ document.getElementById('btn').addEventListener('click', show_selected);
   <!-- search box -->
   <form class="search-container">
     <input type="text" id="search-bar" placeholder="Search My course">
-    <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+    <!-- <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a> -->
   </form>
     <!-- filters all related to type of the job -->
    

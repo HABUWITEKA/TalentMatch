@@ -319,9 +319,9 @@ nav{
     font-family: Microsoft Yahei UI;
     font-size: 15px;
   }
-  input[type=submit]{
+  /* input[type=submit]{
     background-color: #1CC8E3;
-  }
+  } */
 
   .cancel{
     background-color: black;
@@ -363,6 +363,7 @@ nav{
     transform: scale(1,1);
     display: none;
     top:10px;
+    left:0px;
     position: relative;
   }
   #upload{
@@ -451,9 +452,13 @@ table th {
   }
   #postjob{
   width: 300px;
-  height: 300px;
+  height: 500px;
   background-color: whitesmoke;
   left:300px;
   top:900px;
   position: absolute;
+}
+.postbtn{
+  top:500px;
+  position: relative;
 }

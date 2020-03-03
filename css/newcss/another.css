@@ -1,6 +1,6 @@
 #postjob{
 	width: 600px;
-	height: 570px;
+	height: 350px;
 	background-color: white;
 	left:530px;
 	top:120px;
@@ -125,7 +125,7 @@ textarea{
 	font-family: Microsoft Yahei UI;
 	font-weight: bold;
 	top:430px;
-	left:135px;
+	left:175px;
 	position: absolute;
 }
 input[type=file]{
@@ -140,7 +140,7 @@ input[type=file]{
 	position: relative;
 }
 input[type=submit]{
-	top:510px;
+	/* top:510px;
 	left:30px;
 	position: absolute;
 	background-color: orange;
@@ -149,8 +149,9 @@ input[type=submit]{
 	border-radius: 0px;
     font-family: Microsoft Yahei UI;
     font-size: 20px;
-    color: white;
+    color: white; */
 }
+
 
 .label{
 	left:0px;
@@ -254,4 +255,29 @@ margin-left: -65px;
 #jobtitlelabel{
 	left: 148px;
 	position: relative;
+}
+#formtoupload{
+    width: 300px;
+    height: 60px;
+    background-color: #C8E31C;
+    transform: scale(1,1);
+    display: none;
+    top:10px;
+    left:0px;
+    position: relative;
+  }
+.desactivate{
+display:inline-block;
+padding:0.3em 1.2em;
+margin:0 0.1em 0.1em 0;
+border:0.16em solid red;
+background: red;
+border-radius:.2em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+color:#FFFFFF;
+text-align:center;
+transition: all 0.2s;
 }

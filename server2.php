@@ -79,6 +79,7 @@ if (isset($_POST['logincompany'])) {
     }
   }
 }
+
 // add a posting to a database
 // if (isset($_POST['submitjob'])) {
 //   # code...
@@ -92,6 +93,7 @@ if (isset($_POST['logincompany'])) {
   // mysql_query($db, $adding);
 
 // }
+//delete button to delete a post
 
 
   ?>

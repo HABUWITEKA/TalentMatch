@@ -7,6 +7,7 @@ $query = mysqli_query($dbconnect, "SELECT * FROM comapnyusers where email='$emai
 $query2 = mysqli_query($dbconnect,"SELECT * FROM jobsposting where Email='$email'" );
 $row = mysqli_fetch_assoc($query);
 $row2 = mysqli_fetch_assoc($query2);
+$jobcount = "SELECT COUNT(*) FROM jobsposting";
 
 //profile picture things
  if (isset($_POST['upload'])) {
@@ -81,6 +82,7 @@ if (isset($_POST['Jobsubmit'])) {
     $query = "INSERT INTO jobsposting (Jobtitle, Jobentrylevel, Jobindustry, jobdescription, jobdescriptionpdf, Deadline, Email )
     VALUES ('$jobtitle','$jobentrylevel','$jobindustry', '$jobdescription', '$jobdescriptionpdf', '$jobdeadline', '$email')";
     mysqli_query($db, $query);
+    $addingposts="SELECT COUNT(*) FROM jobsposting";
   }
 ?>
 
@@ -250,7 +252,7 @@ function closedisplayjobposter2(){
         </div>
         <img src="img/close.png" class="closeimage" onclick="closedisplayjobposter()">
         <!--  -->
-        <form action="dashboard2.php" method="post">
+        <form action="dashboard2.php" method="post" id="Joobb">
             <div id="jobbdead">
             <label id="jobtitlelabel">Job Title</label>
             <input type="text" name="jobtitle" id="jobtitle" placeholder="Job title"></div>
@@ -264,15 +266,50 @@ function closedisplayjobposter2(){
                 <option>Middle</option>
                 <option>High</option>
             </select>
+            
             <label id="jobindustrylabel">Job's Industry</label>
             <input type="text" name="jobindustry" id="jobindustry" placeholder="Job Industry">
-            <label id="jobdescriptionlabel">Job description</label>
-            <textarea id="jobdescription" placeholder="Job Description" name="jobdescription"></textarea>
-            <p id="alternative">Or, choose to upload Pdf of job description</p>
+            <div style="top:-270px;position:relative;">
             <input type="file" name="pdfdescription" value="Upload Pdf">
-            <input type="submit" name="Jobsubmit" value="Post The job">
+            <p id="alternative">Upload Pdf of job description</p>
+            <input type="submit" name="Jobsubmit" value="Post The job" style="top:490px;left:-70px;position:relative;text-align: center;
+	font-size: 20px;
+	font-family: Microsoft Yahei UI;
+	font-weight: bold;
+	width:300px;
+	border-style: solid;
+	border-color: orange;
+	background-color: orange;
+	color: white;">
+        </div>
         </form>
     </div>
+    <table>
+        <tr>
+            <th>Job id</th>
+            <th>Job title</th>
+            <th>Date posted</th>
+            <th>Deadline</th>
+            <th>status</th>
+        </tr>
+        <?php 
+  
+  $result = mysqli_query($dbconnect, "SELECT * FROM jobsposting where email='$email'");
+  while ($mydata = mysqli_fetch_assoc($result)) { ?>
+    <tr>
+            <td><?php echo $mydata['ID']; ?></td>
+            <td><?php echo $mydata['Jobtitle']; ?></td>
+            <td>Any</td>
+            <td><?php echo $mydata['Deadline']; ?></td>
+            <td>
+            <a href="delete.php?id=<?echo $mydata['ID'];?>"><button class="desactivate" name="desactivate">Desactivate</button>
+            </td>
+        </tr>
+  <?php } ?>
+  
+  ?>
+        
+    </table>
     <button class="postbtn" onclick="displayjobposter()">Post A job!</button>
 </div>
 

@@ -6,6 +6,7 @@
     position: absolute;
     visibility: hidden;
 }
+
 .postview{
     width:800px;
     height: 930px;
@@ -80,7 +81,7 @@ iframe{
     left:-410px;
     position: absolute;
     top:160px;
-    height:400px;
+    height:600px;
 
 }
 form{
@@ -92,6 +93,10 @@ form{
     left:410px;
     top:200px;
     position: absolute;
+}
+.submitcover{
+   top:225px;
+   position: absolute;
 }
 textarea{
     width: 620px;
@@ -114,7 +119,7 @@ label{
     width: 600px;
     z-index: 200;
     margin-left: 7px;
-    margin-top: 8px}
+    margin-top: 278px}
 
 .return{
     background: black;
@@ -141,10 +146,10 @@ label{
     font-size: 1rem;
     border: 1px solid #D0CFCE;
     outline: none;
-    &:focus{
+  }&:focus{
       border: 1px solid #008ABF;
       transition: 0.35s ease;
-      color: #008ABF;
+      color: #008ABF;}
       &::-webkit-input-placeholder{
         transition: opacity 0.45s ease; 
           opacity: 0;
